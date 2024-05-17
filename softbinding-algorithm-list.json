@@ -1,1 +1,47 @@
-{}
+[
+    {
+        "identifier": 1,
+        "deprecated": false,
+        "alg": "com.adobe.trustmark.Q",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe Trustmark variant Q",
+            "dateEntered": "2024-05-17T17:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://github.com/adobe/trustmark/"
+        }
+    },
+    {
+        "identifier": 2,
+        "deprecated": false,
+        "alg": "com.adobe.trustmark.C",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe Trustmark variant C",
+            "dateEntered": "2024-05-17T17:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://github.com/adobe/trustmark/"
+        }
+    },
+    {
+        "identifier": 3,
+        "deprecated": false,
+        "alg": "com.adobe.icn.dense",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe Image Comparator Network Dense Fingerprint",
+            "dateEntered": "2024-05-17T17:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://openaccess.thecvf.com/content/CVPR2021W/WMF/html/Black_Deep_Image_Comparator_Learning_To_Visualize_Editorial_Change_CVPRW_2021_paper.html"
+        }
+    }
+]
