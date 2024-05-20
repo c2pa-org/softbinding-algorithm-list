@@ -1,1 +1,21 @@
-{}
+{
+    [
+    {
+        "identifier": 1,
+        "deprecated": false,
+        "alg": "ai.steg.api",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video",
+            "application/pdf"
+        ],
+        "entryMetadata": {
+            "description": "Steg.AI invisible watermarking",
+            "dateEntered": "2024-05-20T09:45:00.000Z",
+            "contact": "info@steg.ai",
+            "informationalUrl": "https://steg.ai/paper/"
+        }
+    }
+]
+}
