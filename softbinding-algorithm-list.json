@@ -8,7 +8,7 @@
         "decodedMediaTypes": [
             "image",
             "video",
-            "application/pdf"
+            "application"
         ],
         "entryMetadata": {
             "description": "Steg.AI invisible watermarking",
