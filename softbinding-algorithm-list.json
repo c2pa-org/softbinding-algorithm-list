@@ -1,6 +1,6 @@
 [
   {
-    "identifier": 0,
+    "identifier": 3,
     "alg": "io.iscc.v0",
     "type": "fingerprint",
     "decodedMediaTypes": [
