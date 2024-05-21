@@ -1,7 +1,7 @@
 {
     [
     {
-        "identifier": 1,
+        "identifier": 7,
         "deprecated": false,
         "alg": "ai.steg.api",
         "type": "watermark",
