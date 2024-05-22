@@ -31,5 +31,23 @@
             "contact": "atsc@atsc.org",
             "informationalUrl": "https://www.atsc.org/atsc-documents/a3362017-content-recovery-redistribution-scenarios/"
         }
+    },
+    {
+    "identifier": 3,
+    "alg": "io.iscc.v0",
+    "type": "fingerprint",
+    "decodedMediaTypes": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "application"
+    ],
+    "entryMetadata": {
+      "description": "ISO 24138 - International Standard Content Code (ISCC) V0 algorithm",
+      "dateEntered": "2024-05-17T16:00:00Z",
+      "contact": "info@iscc.io",
+      "informationalUrl": "https://www.iso.org/standard/77899.html"
     }
+  }
 ]
