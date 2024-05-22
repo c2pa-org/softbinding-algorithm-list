@@ -1,6 +1,6 @@
 [
     {
-        "identifier": 1,
+        "identifier": 4,
         "deprecated": false,
         "alg": "com.adobe.trustmark.Q",
         "type": "watermark",
