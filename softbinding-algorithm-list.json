@@ -1,6 +1,6 @@
 [
     {
-        "identifier": 1,
+        "identifier": 2,
         "deprecated": false,
         "alg": "org.atsc.a336",
         "type": "watermark",
