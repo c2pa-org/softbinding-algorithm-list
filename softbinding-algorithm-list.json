@@ -30,7 +30,7 @@
         }
     },
     {
-        "identifier": 3,
+        "identifier": 6,
         "deprecated": false,
         "alg": "com.adobe.icn.dense",
         "type": "fingerprint",
