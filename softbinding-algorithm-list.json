@@ -1,7 +1,57 @@
 [
+     {
+        "identifier": 1,
+        "alg": "com.digimarc.validate.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video",
+            "text",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Digimarc's Validate Digital Watermarking algorithm",
+            "dateEntered": "2024-05-17T17:00:00.000Z",
+            "contact": "info@digimarc.com",
+            "informationalUrl": "https://www.digimarc.com/products/digital-content-authentication"
+        }
+    },  
     {
+        "identifier": 2,
+        "alg": "org.atsc.a336",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "ATSC watermarking (A/334, A/335, A/336)",
+            "dateEntered": "2024-05-17T15:43:00.000Z",
+            "contact": "atsc@atsc.org",
+            "informationalUrl": "https://www.atsc.org/atsc-documents/a3362017-content-recovery-redistribution-scenarios/"
+        }
+    },
+    {
+    "identifier": 3,
+    "alg": "io.iscc.v0",
+    "type": "fingerprint",
+    "decodedMediaTypes": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "application"
+    ],
+    "entryMetadata": {
+      "description": "ISO 24138 - International Standard Content Code (ISCC) V0 algorithm",
+      "dateEntered": "2024-05-17T16:00:00Z",
+      "contact": "info@iscc.io",
+      "informationalUrl": "https://www.iso.org/standard/77899.html"
+    }
+  },
+  {
         "identifier": 4,
-        "deprecated": false,
         "alg": "com.adobe.trustmark.Q",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -16,7 +66,6 @@
     },
     {
         "identifier": 5,
-        "deprecated": false,
         "alg": "com.adobe.trustmark.C",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -31,7 +80,6 @@
     },
     {
         "identifier": 6,
-        "deprecated": false,
         "alg": "com.adobe.icn.dense",
         "type": "fingerprint",
         "decodedMediaTypes": [
