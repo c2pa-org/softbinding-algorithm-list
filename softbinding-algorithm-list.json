@@ -1,6 +1,5 @@
-
-    [
-     {
+[
+    {
         "identifier": 1,
         "alg": "com.digimarc.validate.1",
         "type": "watermark",
@@ -11,12 +10,12 @@
             "image"
         ],
         "entryMetadata": {
-            "description": "Digimarc's Validate Digital Watermarking algorithm",
+            "description": "Digimarc Validate Digital Watermarking algorithm",
             "dateEntered": "2024-05-17T17:00:00.000Z",
             "contact": "info@digimarc.com",
             "informationalUrl": "https://www.digimarc.com/products/digital-content-authentication"
         }
-    },  
+    },
     {
         "identifier": 2,
         "alg": "org.atsc.a336",
@@ -34,24 +33,24 @@
         }
     },
     {
-    "identifier": 3,
-    "alg": "io.iscc.v0",
-    "type": "fingerprint",
-    "decodedMediaTypes": [
-      "text",
-      "image",
-      "audio",
-      "video",
-      "application"
-    ],
-    "entryMetadata": {
-      "description": "ISO 24138 - International Standard Content Code (ISCC) V0 algorithm",
-      "dateEntered": "2024-05-17T16:00:00Z",
-      "contact": "info@iscc.io",
-      "informationalUrl": "https://www.iso.org/standard/77899.html"
-    }
-  },
-  {
+        "identifier": 3,
+        "alg": "io.iscc.v0",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "application"
+        ],
+        "entryMetadata": {
+            "description": "ISO 24138 - International Standard Content Code (ISCC) V0 algorithm",
+            "dateEntered": "2024-05-17T16:00:00Z",
+            "contact": "info@iscc.io",
+            "informationalUrl": "https://www.iso.org/standard/77899.html"
+        }
+    },
+    {
         "identifier": 4,
         "alg": "com.adobe.trustmark.Q",
         "type": "watermark",
@@ -93,9 +92,8 @@
             "informationalUrl": "https://openaccess.thecvf.com/content/CVPR2021W/WMF/html/Black_Deep_Image_Comparator_Learning_To_Visualize_Editorial_Change_CVPRW_2021_paper.html"
         }
     },
-      {
+    {
         "identifier": 7,
-        "deprecated": false,
         "alg": "ai.steg.api",
         "type": "watermark",
         "decodedMediaTypes": [
