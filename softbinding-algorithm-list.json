@@ -15,7 +15,7 @@
         }
     },
     {
-        "identifier": 2,
+        "identifier": 5,
         "deprecated": false,
         "alg": "com.adobe.trustmark.C",
         "type": "watermark",
