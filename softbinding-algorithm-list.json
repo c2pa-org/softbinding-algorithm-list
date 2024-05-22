@@ -1,5 +1,38 @@
 [
-  {
+     {
+        "identifier": 1,
+        "alg": "com.digimarc.validate.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video",
+            "text",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Digimarc's Validate Digital Watermarking algorithm",
+            "dateEntered": "2024-05-17T17:00:00.000Z",
+            "contact": "info@digimarc.com",
+            "informationalUrl": "https://www.digimarc.com/products/digital-content-authentication"
+        }
+    },  
+    {
+        "identifier": 2,
+        "alg": "org.atsc.a336",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "ATSC watermarking (A/334, A/335, A/336)",
+            "dateEntered": "2024-05-17T15:43:00.000Z",
+            "contact": "atsc@atsc.org",
+            "informationalUrl": "https://www.atsc.org/atsc-documents/a3362017-content-recovery-redistribution-scenarios/"
+        }
+    },
+    {
     "identifier": 3,
     "alg": "io.iscc.v0",
     "type": "fingerprint",
