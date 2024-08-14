@@ -107,5 +107,19 @@
             "contact": "info@steg.ai",
             "informationalUrl": "https://steg.ai/paper/"
         }
+    },
+    {
+        "identifier": 8,
+        "alg": "app.overlai.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Overlai Watermark version 1",
+            "dateEntered": "2024-08-14T16:00:00.000Z",
+            "contact": "luke@overlai.app",
+            "informationalUrl": "https://overlai.app/watermark"
+        }
     }
 ]
