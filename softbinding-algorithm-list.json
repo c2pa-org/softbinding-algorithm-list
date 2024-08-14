@@ -107,5 +107,33 @@
             "contact": "info@steg.ai",
             "informationalUrl": "https://steg.ai/paper/"
         }
+    },
+    {
+        "identifier": 8,
+        "alg": "ai.trufo.gen1.image",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Trufo image watermark.",
+            "dateEntered": "2024-08-14T15:00:00.000Z",
+            "contact": "tech@trufo.ai",
+            "informationalUrl": "https://trufo.ai/publications/"
+        }
+    },
+    {
+        "identifier": 9,
+        "alg": "ai.trufo.gen1.image-lite",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Trufo image watermark (lite version).",
+            "dateEntered": "2024-08-14T15:00:00.000Z",
+            "contact": "tech@trufo.ai",
+            "informationalUrl": "https://trufo.ai/publications/"
+        }
     }
 ]
