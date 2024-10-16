@@ -149,5 +149,19 @@
             "contact": "luke@overlai.app",
             "informationalUrl": "https://overlai.app/watermark"
         }
+    },
+    {
+        "identifier": 11,
+        "alg": "tv.kinetiq.watercast.48.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"           
+        ],
+        "entryMetadata": {
+            "description": "Teletrax Watermarking algorithm",
+            "dateEntered": "2024-10-16T17:00:00.000Z",
+            "contact": "c2pa@kinetiq.tv",
+            "informationalUrl": "https://kinetiq.tv/broadcasting-syndication/"
+        }
     }
 ]
