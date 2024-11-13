@@ -163,5 +163,19 @@
             "contact": "c2pa@kinetiq.tv",
             "informationalUrl": "https://kinetiq.tv/broadcasting-syndication/"
         }
+    },
+    {
+        "identifier": 12,
+        "alg": "castLabs.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"           
+        ],
+        "entryMetadata": {
+            "description": "castLabs Single Frame Forensic Watermarking",
+            "dateEntered": "2024-11-13T12:00:00.000Z",
+            "contact": "info@castlabs.com",
+            "informationalUrl": "https://castlabs.com/image-watermarking/"
+        }
     }
 ]
