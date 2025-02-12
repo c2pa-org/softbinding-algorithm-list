@@ -177,5 +177,19 @@
             "contact": "info@castlabs.com",
             "informationalUrl": "https://castlabs.com/image-watermarking/"
         }
+    },
+    {
+        "identifier": 13,
+        "alg": "com.adobe.trustmark.P”,
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe Trustmark variant P”,
+            "dateEntered": "2025-02-05T17:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://github.com/adobe/trustmark/"
+        }
     }
 ]
