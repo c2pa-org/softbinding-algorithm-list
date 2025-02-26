@@ -194,7 +194,7 @@
     }
     {
         "identifier": 15,
-        "alg": "lamark",
+        "alg": "com.imatag.lamark.v1",
         "type": "watermark",
         "decodedMediaTypes": [
             "image"
