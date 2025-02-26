@@ -193,7 +193,7 @@
         }
     }
     {
-        "identifier": 14,
+        "identifier": 15,
         "alg": "lamark",
         "type": "watermark",
         "decodedMediaTypes": [
