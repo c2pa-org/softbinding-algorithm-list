@@ -193,7 +193,7 @@
         }
     }
     {
-        "identifier": 15,
+        "identifier": 14,
         "alg": "com.imatag.lamark.v1",
         "type": "watermark",
         "decodedMediaTypes": [
