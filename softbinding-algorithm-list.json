@@ -192,4 +192,18 @@
             "informationalUrl": "https://github.com/adobe/trustmark/"
         }
     }
+    {
+        "identifier": 14,
+        "alg": "com.imatag.lamark.v1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Imatag invisible watermarking for images",
+            "dateEntered": "2025-02-26T15:00:00.000Z",
+            "contact": "c2pa@imatag.com",
+            "informationalUrl": "https://www.imatag.com/digital-watermarking/"
+        }
+    }
 ]
