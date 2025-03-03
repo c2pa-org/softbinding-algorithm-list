@@ -155,7 +155,7 @@
         "alg": "tv.kinetiq.watercast.48.1",
         "type": "watermark",
         "decodedMediaTypes": [
-            "video"           
+            "video"
         ],
         "entryMetadata": {
             "description": "Teletrax Watermarking algorithm",
@@ -169,7 +169,7 @@
         "alg": "castLabs.watermark.1",
         "type": "watermark",
         "decodedMediaTypes": [
-            "video"           
+            "video"
         ],
         "entryMetadata": {
             "description": "castLabs Single Frame Forensic Watermarking",
@@ -191,7 +191,7 @@
             "contact": "collomos@adobe.com",
             "informationalUrl": "https://github.com/adobe/trustmark/"
         }
-    }
+    },
     {
         "identifier": 14,
         "alg": "com.imatag.lamark.v1",
@@ -204,6 +204,22 @@
             "dateEntered": "2025-02-26T15:00:00.000Z",
             "contact": "c2pa@imatag.com",
             "informationalUrl": "https://www.imatag.com/digital-watermarking/"
+        }
+    },
+    {
+        "identifier": 15,
+        "alg": "com.nagra.nexguard.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video",
+            "audio",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "NAGRA NexGuard Watermarking with Single Frame Detection Capability",
+            "dateEntered": "2025-02-26T13:53:25.000Z",
+            "contact": "gabriel.cantin@nagra.com",
+            "informationalUrl": "https://nagra.vision/security-solutions/forensic-watermarking/"
         }
     }
 ]
