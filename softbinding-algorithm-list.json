@@ -208,7 +208,7 @@
     },
     {
         "identifier": 15,
-        "alg": "NAGRA.NexGuard.Watermark",
+        "alg": "com.nagra.nexguard.watermark.1",
         "type": "watermark",
         "decodedMediaTypes": [
             "video",
