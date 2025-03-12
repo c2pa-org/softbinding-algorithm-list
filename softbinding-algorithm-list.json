@@ -221,5 +221,21 @@
             "contact": "gabriel.cantin@nagra.com",
             "informationalUrl": "https://nagra.vision/security-solutions/forensic-watermarking/"
         }
+    },
+    {
+        "identifier": 16,
+        "alg": "com.mentaport.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video",
+            "audio",
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Mentaport Watermarking Engine",
+            "dateEntered": "2025-03-12T13:00:00.000Z",
+            "contact": "hello@mentaport.com",
+            "informationalUrl": "https://docs.mentaport.xyz"
+        }
     }
 ]
