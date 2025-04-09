@@ -8,6 +8,11 @@
             "maximum": 65535,
             "description": "This identifier will be assigned when the soft binding algorithm is added to the list."
         },
+        "deprecated": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether this soft binding algorithm is deprecated. Deprecated algorithms shall not be used for creating soft bindings.  Deprecated algorithms may be used for resolving soft bindings but this behaviour is discouraged."
+        },
         "alg": {
             "type": "string",
             "pattern": "(c2pa\\.|[A-Za-z0-9\\-\\.]+)",
