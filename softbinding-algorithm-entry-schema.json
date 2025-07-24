@@ -19,7 +19,6 @@
             "description": "Entity-specific namespace as specified for C2PA Assertions labels that shall begin with the Internet domain name for the entity similar to how Java packages are defined (e.g., `com.example.algo1`, `net.example.algos.algo2`)"
         },
         "type": {
-            "type": "string",
             "enum": [
                 "watermark",
                 "fingerprint"
@@ -30,7 +29,6 @@
             "type": "array",
             "minItems": 1,
             "items": {
-                "type": "string",
                 "enum": [
                     "application",
                     "audio",
