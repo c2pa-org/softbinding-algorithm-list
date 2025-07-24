@@ -28,5 +28,5 @@ jobs:
       run: |
         echo "Validating softbinding-algorithm-list.json against schema..."
         set -e  # Exit on any error
-        jsonschema validate softbinding-algorithm-list.json --schema softbinding-algorithm-entry-schema.json
+        jsonschema validate softbinding-algorithm-entry-schema.json softbinding-algorithm-list.json 
         echo "✓ softbinding-algorithm-list.json is valid against the schema"
