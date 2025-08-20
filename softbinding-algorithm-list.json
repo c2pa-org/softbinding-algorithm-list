@@ -251,5 +251,20 @@
             "contact": "info.bornid@digicaps.com",
             "informationalUrl": "https://docs.bornid.io"
         }
+    },
+    {
+        "identifier": 18,
+        "alg": "com.sonicorigin.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "SonicOrigin Watermarking Engine",
+            "dateEntered": "2025-08-13T18:25:00.000Z",
+            "contact": "info@sonicai.ai",
+            "informationalUrl": "https://sonicai.ai"
+        }
     }
 ]
