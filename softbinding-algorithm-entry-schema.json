@@ -1,110 +1,114 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "identifier": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 65535,
-            "description": "This identifier will be assigned when the soft binding algorithm is added to the list."
-        },
-        "deprecated": {
-            "type": "boolean",
-            "default": false,
-            "description": "Indicates whether this soft binding algorithm is deprecated. Deprecated algorithms shall not be used for creating soft bindings.  Deprecated algorithms may be used for resolving soft bindings but this behaviour is discouraged."
-        },
-        "alg": {
-            "type": "string",
-            "pattern": "(c2pa\\.|[A-Za-z0-9\\-\\.]+)",
-            "description": "Entity-specific namespace as specified for C2PA Assertions labels that shall begin with the Internet domain name for the entity similar to how Java packages are defined (e.g., `com.example.algo1`, `net.example.algos.algo2`)"
-        },
-        "type": {
-            "type": "string",
-            "enum": [
-                "watermark",
-                "fingerprint"
-            ],
-            "description": "Type of soft binding implemented by this algorithm."
-        },
-        "decodedMediaTypes": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
+    "$id": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "identifier": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 65535,
+                "description": "This identifier will be assigned when the soft binding algorithm is added to the list."
+            },
+            "deprecated": {
+                "type": "boolean",
+                "default": false,
+                "description": "Indicates whether this soft binding algorithm is deprecated. Deprecated algorithms shall not be used for creating soft bindings.  Deprecated algorithms may be used for resolving soft bindings but this behaviour is discouraged."
+            },
+            "alg": {
                 "type": "string",
+                "pattern": "(c2pa\\.|[A-Za-z0-9\\-\\.]+)",
+                "description": "Entity-specific namespace as specified for C2PA Assertions labels that shall begin with the Internet domain name for the entity similar to how Java packages are defined (e.g., `com.example.algo1`, `net.example.algos.algo2`)"
+            },
+            "type": {
                 "enum": [
-                    "application",
-                    "audio",
-                    "image",
-                    "model",
-                    "text",
-                    "video"
+                    "watermark",
+                    "fingerprint"
                 ],
-                "description": "IANA top level media type (rendered) for which this soft binding algorithm applies."
-            }
-        },
-        "encodedMediaTypes": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "type": "string",
-                "description": "IANA media type for which this soft binding algorithm applies, e.g., application/pdf",
-                "pattern": "^([a-zA-Z0-9\\-]+\\/[a-zA-Z0-9\\-\\+]+(?:\\.[a-zA-Z0-9\\-\\+]+)*)$"
-            }
-        },
-        "entryMetadata": {
-            "type": "object",
-            "properties": {
-                "description": {
-                    "type": "string",
-                    "description": "Human readable description of the algorithm."
-                },
-                "dateEntered": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Date of entry for this algorithm."
-                },
-                "contact": {
-                    "type": "string",
-                    "format": "email"
-                },
-                "informationalUrl": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "A web page containing more details about the algorithm."
+                "description": "Type of soft binding implemented by this algorithm."
+            },
+            "decodedMediaTypes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "enum": [
+                        "application",
+                        "audio",
+                        "image",
+                        "model",
+                        "text",
+                        "video"
+                    ],
+                    "description": "IANA top level media type (rendered) for which this soft binding algorithm applies."
                 }
             },
-            "required": [
-                "description",
-                "dateEntered",
-                "contact",
-                "informationalUrl"
-            ]
-        },
-        "softBindingResolutionApis": {
-            "type": "array",
-            "items": {
-                "type": "string",
-                "format": "uri"
+            "encodedMediaTypes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "string",
+                    "description": "IANA media type for which this soft binding algorithm applies, e.g., application/pdf",
+                    "pattern": "^([a-zA-Z0-9\\-]+\\/[a-zA-Z0-9\\-\\+]+(?:\\.[a-zA-Z0-9\\-\\+]+)*)$"
+                }
             },
-            "description": "A list of Soft Binding Resolution APIs supporting this algorithm."
-        }
-    },
-    "required": [
-        "identifier",
-        "alg",
-        "type",
-        "entryMetadata"
-    ],
-    "oneOf": [
-        {
-            "required": [
-                "decodedMediaTypes"
-            ]
+            "entryMetadata": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Human readable description of the algorithm."
+                    },
+                    "dateEntered": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date of entry for this algorithm."
+                    },
+                    "contact": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "informationalUrl": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "A web page containing more details about the algorithm."
+                    }
+                },
+                "required": [
+                    "description",
+                    "dateEntered",
+                    "contact",
+                    "informationalUrl"
+                ]
+            },
+            "softBindingResolutionApis": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "description": "A list of Soft Binding Resolution APIs supporting this algorithm."
+            }
         },
-        {
-            "required": [
-                "encodedMediaTypes"
-            ]
-        }
-    ]
+        "oneOf": [
+            {
+                "required": ["decodedMediaTypes"],
+                "not": {
+                    "required": ["encodedMediaTypes"]
+                }
+            },
+            {
+                "required": ["encodedMediaTypes"],
+                "not": {
+                    "required": ["decodedMediaTypes"]
+                }
+            }
+        ],
+        "required": [
+            "identifier",
+            "alg",
+            "type",
+            "entryMetadata"
+        ]
+    }
 }
