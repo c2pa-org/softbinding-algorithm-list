@@ -90,25 +90,33 @@
                 "description": "A list of Soft Binding Resolution APIs supporting this algorithm."
             }
         },
-        "oneOf": [
-            {
-                "required": ["decodedMediaTypes"],
-                "not": {
-                    "required": ["encodedMediaTypes"]
-                }
-            },
-            {
-                "required": ["encodedMediaTypes"],
-                "not": {
-                    "required": ["decodedMediaTypes"]
-                }
-            }
-        ],
         "required": [
             "identifier",
             "alg",
             "type",
             "entryMetadata"
+        ],
+        "oneOf": [
+            {
+                "required": [
+                    "decodedMediaTypes"
+                ],
+                "not": {
+                    "required": [
+                        "encodedMediaTypes"
+                    ]
+                }
+            },
+            {
+                "required": [
+                    "encodedMediaTypes"
+                ],
+                "not": {
+                    "required": [
+                        "decodedMediaTypes"
+                    ]
+                }
+            }
         ]
     }
 }
