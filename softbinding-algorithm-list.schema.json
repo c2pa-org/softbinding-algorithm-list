@@ -18,7 +18,7 @@
             },
             "alg": {
                 "type": "string",
-                "pattern": "^[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)+$",
+                "pattern": "^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)+$",
                 "description": "Entity-specific namespace as specified for C2PA Assertions labels that shall begin with the Internet domain name for the entity similar to how Java packages are defined (e.g., `com.example.algo1`, `net.example.algos.algo2`)"
             },
             "type": {
@@ -64,7 +64,7 @@
                         "description": "This allows specifying values that can be used to cluster this algorithm with others of the same or similar values. For example an algorithm that is used in a certain context (e.g., verified news, advertising). The format of these categories follows the entity-specific namespace as specified for C2PA Assertions labels that shall begin with the (reversed) Internet domain name for the entity similar to how Java packages are defined (e.g., `org.iptc.watermarking`, `net.example.cluster.context1`)",
                         "items": {
                             "type": "string",
-                            "pattern": "^[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)+$"
+                            "pattern": "^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)+$"
                         }
                     },
                     "dateEntered": {
