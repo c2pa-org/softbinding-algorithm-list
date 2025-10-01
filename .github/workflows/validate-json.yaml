@@ -19,14 +19,14 @@ jobs:
         
     - name: Lint JSON files
       run: |
-        echo "Linting softbinding-algorithm-entry-schema.json..."
+        echo "Linting softbinding-algorithm-list.schema.json..."
         set -e  # Exit on any error
-        jsonschema lint softbinding-algorithm-entry-schema.json
-        echo "✓ softbinding-algorithm-entry-schema.json passed linting"
+        jsonschema lint softbinding-algorithm-list.schema.json
+        echo "✓ softbinding-algorithm-list.schema.json passed linting"
         
     - name: Validate against schema
       run: |
         echo "Validating softbinding-algorithm-list.json against schema..."
         set -e  # Exit on any error
-        jsonschema validate softbinding-algorithm-entry-schema.json softbinding-algorithm-list.json 
+        jsonschema validate softbinding-algorithm-list.schema.json softbinding-algorithm-list.json 
         echo "✓ softbinding-algorithm-list.json is valid against the schema"

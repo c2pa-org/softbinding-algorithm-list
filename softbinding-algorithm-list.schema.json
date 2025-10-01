@@ -18,7 +18,7 @@
             },
             "alg": {
                 "type": "string",
-                "pattern": "(c2pa\\.|[A-Za-z0-9\\-\\.]+)",
+                "pattern": "^[A-Za-z]{2,63}(?:\\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+\\.?$",
                 "description": "Entity-specific namespace as specified for C2PA Assertions labels that shall begin with the Internet domain name for the entity similar to how Java packages are defined (e.g., `com.example.algo1`, `net.example.algos.algo2`)"
             },
             "type": {
@@ -59,6 +59,14 @@
                         "type": "string",
                         "description": "Human readable description of the algorithm."
                     },
+                    "categories": {
+                        "type": "array",
+                        "description": "This allows specifying values that can be used to cluster this algorithm with others of the same or similar values. For example an algorithm that is used in a certain context (e.g., verified news, advertising). The format of these categories follows the entity-specific namespace as specified for C2PA Assertions labels that shall begin with the (reversed) Internet domain name for the entity similar to how Java packages are defined (e.g., `org.iptc.watermarking`, `net.example.cluster.context1`)",
+                        "items": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z]{2,63}(?:\\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+\\.?$"
+                        }
+                    },
                     "dateEntered": {
                         "type": "string",
                         "format": "date-time",
@@ -90,25 +98,33 @@
                 "description": "A list of Soft Binding Resolution APIs supporting this algorithm."
             }
         },
-        "oneOf": [
-            {
-                "required": ["decodedMediaTypes"],
-                "not": {
-                    "required": ["encodedMediaTypes"]
-                }
-            },
-            {
-                "required": ["encodedMediaTypes"],
-                "not": {
-                    "required": ["decodedMediaTypes"]
-                }
-            }
-        ],
         "required": [
             "identifier",
             "alg",
             "type",
             "entryMetadata"
+        ],
+        "oneOf": [
+            {
+                "required": [
+                    "decodedMediaTypes"
+                ],
+                "not": {
+                    "required": [
+                        "encodedMediaTypes"
+                    ]
+                }
+            },
+            {
+                "required": [
+                    "encodedMediaTypes"
+                ],
+                "not": {
+                    "required": [
+                        "decodedMediaTypes"
+                    ]
+                }
+            }
         ]
     }
 }
