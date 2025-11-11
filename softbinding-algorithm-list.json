@@ -266,5 +266,35 @@
             "contact": "info@sonicai.ai",
             "informationalUrl": "https://sonicai.ai"
         }
+    },
+    {
+        "identifier": 19,
+        "alg": "com.microsoft.invismark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Microsoft Responsible AI InvisMark",
+            "dateEntered": "2025-10-12T18:25:00.000Z",
+            "contact": "rai_provenance@microsoft.com",
+            "informationalUrl": "https://arxiv.org/abs/2411.07795"
+        }
+    },
+    {
+        "identifier": 20,
+        "alg": "com.microsoft.wavmark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Microsoft Responsible AI WavMark",
+            "dateEntered": "2025-10-12T15:00:00.000Z",
+            "contact": "rai_provenance@microsoft.com",
+            "informationalUrl": "https://arxiv.org/abs/2308.12770"
+        }
     }
 ]
