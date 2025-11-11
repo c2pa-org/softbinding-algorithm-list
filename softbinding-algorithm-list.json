@@ -287,7 +287,8 @@
         "alg": "com.microsoft.wavmark.1",
         "type": "watermark",
         "decodedMediaTypes": [
-            "audio"
+            "audio",
+            "video"
         ],
         "entryMetadata": {
             "description": "Microsoft Responsible AI WavMark",
