@@ -296,5 +296,75 @@
             "contact": "rai_provenance@microsoft.com",
             "informationalUrl": "https://arxiv.org/abs/2308.12770"
         }
+    },
+{
+        "identifier": 21,
+        "alg": "ai.contentlens.image.basewmk",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "ContentLens Image Watermarking (Base)",
+            "dateEntered": "2025-11-26T14:30:00.000Z",
+            "contact": "team@contentlens.ai",
+            "informationalUrl": "https://api.contentlens.tech/docs"
+        }
+    },
+    {
+        "identifier": 22,
+        "alg": "ai.contentlens.image.ensemblewmk",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "ContentLens Image Watermarking (Ensemble)",
+            "dateEntered": "2025-11-26T14:30:00.000Z",
+            "contact": "team@contentlens.ai",
+            "informationalUrl": "https://api.contentlens.tech/docs"
+        }
+    },
+    {
+        "identifier": 23,
+        "alg": "ai.contentlens.image.customwmk",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "ContentLens Image Watermarking (Custom)",
+            "dateEntered": "2025-11-26T14:30:00.000Z",
+            "contact": "team@contentlens.ai",
+            "informationalUrl": "https://api.contentlens.tech/docs"
+        }
+    },
+    {
+        "identifier": 24,
+        "alg": "ai.contentlens.audio.mono",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "entryMetadata": {
+            "description": "ContentLens Audio Watermarking (Mono)",
+            "dateEntered": "2025-11-26T14:30:00.000Z",
+            "contact": "team@contentlens.ai",
+            "informationalUrl": "https://api.contentlens.tech/audio/docs"
+        }
+    },
+    {
+        "identifier": 25,
+        "alg": "ai.contentlens.audio.stereo",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "entryMetadata": {
+            "description": "ContentLens Audio Watermarking (Stereo)",
+            "dateEntered": "2025-11-26T14:30:00.000Z",
+            "contact": "team@contentlens.ai",
+            "informationalUrl": "https://api.contentlens.tech/audio/docs"
+        }
     }
 ]
