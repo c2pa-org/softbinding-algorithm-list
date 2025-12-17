@@ -2,7 +2,7 @@
 
 C2PA specifies a mechanism for recovering a C2PA Manifest for an asset, for example when the metadata containing the C2PA Manifest has been stripped.  This mechanism is a [soft binding](https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_soft_binding), for example an invisible watermark or content fingerprint. The soft binding is used to look-up the C2PA Manifest within a Manifest Repository. The soft binding is described by the [soft binding assertion](https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_soft_bindings).
 
-The soft binding assertion contains a field `alg` uniquely identifies the algorithm used to compute the soft binding. The Soft Binding Algorithm List is an authoritative list of soft binding algorithm names that may be used as identifiers within the `alg` field. Entries in the list also contain additional information on the algorithms.
+The soft binding assertion contains a field `alg` which uniquely identifies the algorithm used to compute the soft binding. The Soft Binding Algorithm List is an authoritative list of soft binding algorithm names that may be used as identifiers within the `alg` field. Entries in the list also contain additional information on the algorithms.
 
 ## Guidelines for submitting a new entry
 
