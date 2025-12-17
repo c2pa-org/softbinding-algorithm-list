@@ -7,7 +7,7 @@ The soft binding assertion contains a field `alg` which uniquely identifies the 
 ## Guidelines for submitting a new entry
 
 ### Pull request
-Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests may be made by submitting a Pull Request (PR) adding to or editing the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list-schema.json).
+Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests may be made by submitting a Pull Request (PR) that adds to, or edits, the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list-schema.json).
 
 ### Selection rules
 
