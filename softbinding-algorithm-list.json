@@ -366,5 +366,12 @@
             "contact": "team@contentlens.ai",
             "informationalUrl": "https://api.contentlens.tech/audio/docs"
         }
+    },
+    {
+        "id": 26,
+        "name": "LumaTrace",
+        "description": "Java-native Adaptive Spatial Watermarking using Blue-channel injection and Holographic Tiling robust against cropping.",
+        "maintainer": "https://github.com/Cyrah2R",
+        "url": "https://github.com/Cyrah2R/LumaTrace.git"
     }
 ]
