@@ -369,7 +369,7 @@
     },
     {
         "identifier": 26,
-        "alg": "org.lumatrace.spatial",
+        "alg": "es.lumatrace",
         "type": "watermark",
         "decodedMediaTypes": [
             "image"
@@ -377,7 +377,7 @@
         "entryMetadata": {
             "description": "Java-native Adaptive Spatial Watermarking using Blue-channel injection robust against cropping.",
             "dateEntered": "2026-01-25T12:30:00.000Z",
-            "contact": "https://github.com/Cyrah2R",
+            "contact": "contact@lumatrace.es",
             "informationalUrl": "https://github.com/Cyrah2R/LumaTrace"
         }
     }
