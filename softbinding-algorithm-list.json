@@ -375,10 +375,10 @@
             "image"
         ],
         "entryMetadata": {
-            "description": "Java-native Adaptive Spatial Watermarking using Blue-channel injection robust against cropping.",
-            "dateEntered": "2026-01-25T12:30:00.000Z",
+            "description": "Java-native Adaptive Spatial Watermarking using Blue-channel injection. Reference implementation (v4.0) with Cloud Soft-Binding API.",
+            "dateEntered": "2026-01-26T17:30:00.000Z",
             "contact": "contact@lumatrace.es",
-            "informationalUrl": "https://github.com/Cyrah2R/LumaTrace"
+            "informationalUrl": "https://github.com/Cyrah2R/lumatrace"
         }
     }
 ]
