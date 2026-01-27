@@ -17,7 +17,10 @@ C2PA's Technical Working Group may also decide to remove malicious or non-confor
 
 For an entry to be approved the following criteria are important:
 - The entry has to comply with the [schema](softbinding-algorithm-list-schema.json) and include all the mendatory fields.
-- The PR has to be sumitted by a representative of the named technology (e.g., the commercial vendor, or open source repository maintainer).
+For a PR (new entry or update) to be approved the following criteria are important:
+- The entry has to conform with the [schema](softbinding-algorithm-list-schema.json) and include all the mandatory fields.
+- The entry should not be malicious (e.g., spam) or harmful.
+- The PR has to be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
 - The provided URLs have to resolve (e.g., `softBindingResolutionApis`, `informationalUrl`)
 
 
