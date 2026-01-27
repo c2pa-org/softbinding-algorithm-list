@@ -13,7 +13,7 @@ Developers of soft binding algorithms may request these be added as new entries 
 
 The C2PA Technical Working Group may approve and merge PRs in accordance with its prevailing processes for approving technical contributions to the C2PA specification. 
 
-C2PA's Technical Working Group may also decide to remove malicious or non-conformant algorithms from the list of approved soft binding algorithms.
+C2PA's Technical Working Group may also decide to remove malicious or non-conformant entries from the list of approved soft binding algorithms.
 
 For an entry to be approved the following criteria are important:
 - The entry has to comply with the [schema](softbinding-algorithm-list-schema.json) and include all the mendatory fields.
