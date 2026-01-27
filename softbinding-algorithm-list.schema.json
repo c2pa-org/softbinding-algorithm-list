@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://spec.c2pa.org/specifications/specifications/2.3/specs/C2PA_Specification.html",
     "title": "Soft Binding Algorithm List",
-    "description": "Authoritative list of soft binding algorithms to be used by C2PA implementations for the purpose of recovering C2PA Manifests via soft bindings.",
+    "description": "Authoritative list of soft binding algorithms to be used by C2PA implementations for the purpose of recovering C2PA Manifests via soft bindings",
     "examples": [
         [
             {
