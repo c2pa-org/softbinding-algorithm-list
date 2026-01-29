@@ -1,6 +1,32 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html",
+    "$id": "https://spec.c2pa.org/specifications/specifications/2.3/specs/C2PA_Specification.html",
+    "title": "Soft Binding Algorithm List",
+    "description": "Authoritative list of soft binding algorithms to be used by C2PA implementations for the purpose of recovering C2PA Manifests via soft bindings",
+    "examples": [
+        [
+            {
+                "identifier": 1,
+                "alg": "com.example.watermark.alg1",
+                "type": "watermark",
+                "decodedMediaTypes": [
+                    "image"
+                ],
+                "entryMetadata": {
+                    "description": "Example watermarking algorithm",
+                    "categories": [
+                        "org.example.watermarking"
+                    ],
+                    "dateEntered": "2025-01-01T00:00:00Z",
+                    "contact": "contact@example.com",
+                    "informationalUrl": "https://example.com/softbinding/alg1"
+                },
+                "softBindingResolutionApis": [
+                    "https://resolver.example.com/alg1"
+                ]
+            }
+        ]
+    ],
     "type": "array",
     "items": {
         "type": "object",
@@ -9,12 +35,12 @@
                 "type": "integer",
                 "minimum": 0,
                 "maximum": 65535,
-                "description": "This identifier will be assigned when the soft binding algorithm is added to the list."
+                "description": "This identifier will be assigned when the soft binding algorithm is added to the list"
             },
             "deprecated": {
                 "type": "boolean",
                 "default": false,
-                "description": "Indicates whether this soft binding algorithm is deprecated. Deprecated algorithms shall not be used for creating soft bindings.  Deprecated algorithms may be used for resolving soft bindings but this behaviour is discouraged."
+                "description": "Indicates whether this soft binding algorithm is deprecated. Deprecated algorithms shall not be used for creating soft bindings. Deprecated algorithms may be used for resolving soft bindings but this behaviour is discouraged"
             },
             "alg": {
                 "type": "string",
@@ -26,7 +52,7 @@
                     "watermark",
                     "fingerprint"
                 ],
-                "description": "Type of soft binding implemented by this algorithm."
+                "description": "Type of soft binding implemented by this algorithm"
             },
             "decodedMediaTypes": {
                 "type": "array",
@@ -40,7 +66,7 @@
                         "text",
                         "video"
                     ],
-                    "description": "IANA top level media type (rendered) for which this soft binding algorithm applies."
+                    "description": "IANA top level media type (rendered) for which this soft binding algorithm applies"
                 }
             },
             "encodedMediaTypes": {
@@ -57,7 +83,7 @@
                 "properties": {
                     "description": {
                         "type": "string",
-                        "description": "Human readable description of the algorithm."
+                        "description": "Human readable description of the algorithm"
                     },
                     "categories": {
                         "type": "array",
@@ -70,7 +96,7 @@
                     "dateEntered": {
                         "type": "string",
                         "format": "date-time",
-                        "description": "Date of entry for this algorithm."
+                        "description": "Date of entry for this algorithm"
                     },
                     "contact": {
                         "type": "string",
@@ -79,7 +105,7 @@
                     "informationalUrl": {
                         "type": "string",
                         "format": "uri",
-                        "description": "A web page containing more details about the algorithm."
+                        "description": "A web page containing more details about the algorithm"
                     }
                 },
                 "required": [
@@ -95,7 +121,7 @@
                     "type": "string",
                     "format": "uri"
                 },
-                "description": "A list of Soft Binding Resolution APIs supporting this algorithm."
+                "description": "A list of Soft Binding Resolution APIs supporting this algorithm"
             }
         },
         "required": [
@@ -110,6 +136,9 @@
                     "decodedMediaTypes"
                 ],
                 "not": {
+                    "properties": {
+                        "encodedMediaTypes": {}
+                    },
                     "required": [
                         "encodedMediaTypes"
                     ]
@@ -120,6 +149,9 @@
                     "encodedMediaTypes"
                 ],
                 "not": {
+                    "properties": {
+                        "decodedMediaTypes": {}
+                    },
                     "required": [
                         "decodedMediaTypes"
                     ]

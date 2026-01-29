@@ -297,7 +297,7 @@
             "informationalUrl": "https://arxiv.org/abs/2308.12770"
         }
     },
-{
+    {
         "identifier": 21,
         "alg": "ai.contentlens.image.basewmk",
         "type": "watermark",
