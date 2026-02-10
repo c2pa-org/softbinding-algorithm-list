@@ -16,12 +16,13 @@ The C2PA Technical Working Group will approve and merge PRs in accordance with i
 C2PA's Technical Working Group may also decide to remove malicious or non-conformant entries from the list of approved soft binding algorithms.
 
 For an entry to be approved the following criteria are important:
-- The entry has to comply with the [schema](softbinding-algorithm-list-schema.json) and include all the mendatory fields.
+- The entry has to comply with the [schema](softbinding-algorithm-list-schema.json) and include all the mandatory fields.
 For a PR (new entry or update) to be approved the following criteria are important:
 - The entry has to conform with the [schema](softbinding-algorithm-list-schema.json) and include all the mandatory fields.
 - The entry should not be malicious (e.g., spam) or harmful.
 - The PR has to be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
-- The provided URLs have to successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`)
+- The provided URLs have to successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`).
+- The algorithm covered by the entry should support embedding or extracting a soft binding identifier for the purpose of manifest recovery. 
 
 
 
