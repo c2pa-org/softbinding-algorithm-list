@@ -130,32 +130,16 @@
             "type",
             "entryMetadata"
         ],
-        "oneOf": [
+        "anyOf": [
             {
                 "required": [
                     "decodedMediaTypes"
-                ],
-                "not": {
-                    "properties": {
-                        "encodedMediaTypes": {}
-                    },
-                    "required": [
-                        "encodedMediaTypes"
-                    ]
-                }
+                ]
             },
             {
                 "required": [
                     "encodedMediaTypes"
-                ],
-                "not": {
-                    "properties": {
-                        "decodedMediaTypes": {}
-                    },
-                    "required": [
-                        "decodedMediaTypes"
-                    ]
-                }
+                ]
             }
         ]
     }
