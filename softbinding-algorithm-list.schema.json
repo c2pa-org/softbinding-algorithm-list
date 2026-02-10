@@ -130,7 +130,7 @@
             "type",
             "entryMetadata"
         ],
-        "oneOf": [
+        "anyOf": [
             {
                 "required": [
                     "decodedMediaTypes"
