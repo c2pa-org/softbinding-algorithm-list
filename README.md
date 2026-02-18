@@ -20,7 +20,7 @@ For a PR (new entry or update) to be approved the following criteria are importa
 - The entry shall not appear to be malicious (e.g., spam) or harmful.
 - The PR shall be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
 - The provided URLs shall successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`).
-- The algorithm covered by the entry should support embedding or extracting a soft binding identifier for the purpose of manifest recovery. 
+- The algorithm covered by the entry shall support embedding, extracting, or both, of a soft binding identifier for the purpose of manifest recovery. 
 
 
 
