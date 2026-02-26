@@ -380,5 +380,19 @@
             "contact": "contact@lumatrace.es",
             "informationalUrl": "https://github.com/Cyrah2R/lumatrace-cloud"
         }
+    },
+    {
+        "identifier": 27,
+        "alg": "com.verimatrix.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Verimatrix watermarking algorithm: provides an essence-based forensic watermarking mechanism that may be used as a C2PA soft-binding technology. The algorithm embeds an imperceptible identifier payload directly into the audiovisual signal, enabling persistent association between a media asset and an external provenance record or manifest reference even when file-level cryptographic bindings are broken by transcoding, re-packaging, streaming workflows, or other common transformations. The embedded payload is designed to be robust against compression and typical distribution modifications and can be recovered from derivative copies via blind extraction without requiring access to the original master file. This supports C2PA soft-binding requirements by enabling downstream verification and traceability through extraction of a durable identifier that can be resolved to provenance or distribution metadata maintained outside the media file",
+            "dateEntered": "2026-02-26T14:16:00.000Z",
+            "contact": "c2pa@verimatrix.com",
+            "informationalUrl": "https://www.verimatrix.com/c2pa/watermarking/"
+        }
     }
 ]
