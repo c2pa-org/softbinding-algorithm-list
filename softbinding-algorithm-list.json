@@ -382,19 +382,19 @@
         }
     },
     {
-            "identifier": 27,
-            "alg": "com.markany.watermark",
-            "type": "watermark",
-            "decodedMediaTypes": [
-                    "image",
-                    "video",
-                    "audio"
-            ],
-            "entryMetadata": {
-                    "description": "MarkAny invisible watermarking with robustness against cropping, resizing, and compression",
-                    "dateEntered": "2026-02-25T00:00:00.000Z",
-                    "contact": "c2pa@markany.com",
-                    "informationalUrl": "https://en.markany.com/contentssecurity"
-            }
-    }    
+        "identifier": 27,
+        "alg": "com.markany.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video",
+            "audio"
+        ],
+        "entryMetadata": {
+            "description": "MarkAny invisible watermarking with robustness against cropping, resizing, and compression",
+            "dateEntered": "2026-02-25T00:00:00.000Z",
+            "contact": "c2pa@markany.co.kr",
+            "informationalUrl": "https://en.markany.com/contentssecurity"
+        }
+    }  
 ]
