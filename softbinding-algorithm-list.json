@@ -382,7 +382,7 @@
         }
     },
     {
-        "identifier": 27,
+        "identifier": 28,
         "alg": "com.verimatrix.watermark.1",
         "type": "watermark",
         "decodedMediaTypes": [
