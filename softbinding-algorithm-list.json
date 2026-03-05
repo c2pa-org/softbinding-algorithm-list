@@ -397,7 +397,7 @@
             "informationalUrl": "https://en.markany.com/contentssecurity"
         }
     },
-    }    
+    {    
         "identifier": 28,
         "alg": "com.verimatrix.watermark.1",
         "type": "watermark",
