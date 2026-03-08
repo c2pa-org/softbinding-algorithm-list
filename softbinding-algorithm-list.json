@@ -397,7 +397,7 @@
             "informationalUrl": "https://en.markany.com/contentssecurity"
         }
     },
-    {    
+    {
         "identifier": 28,
         "alg": "com.verimatrix.watermark.1",
         "type": "watermark",
@@ -410,5 +410,26 @@
             "contact": "c2pa@verimatrix.com",
             "informationalUrl": "https://www.verimatrix.com/c2pa/watermarking/"
         }
+    },
+    {
+        "identifier": 29,
+        "alg": "com.aiwatermark.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "video/mp4",
+            "video/webm"
+        ],
+        "entryMetadata": {
+            "description": "Neural video watermarking using Meta FAIR's VideoSeal model, providing perceptually invisible soft-binding watermarks in video content. Supports MP4/WebM. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API.",
+            "dateEntered": "2026-03-08T00:00:00.000Z",
+            "contact": "jonathan@aiwatermark.com",
+            "informationalUrl": "https://aiwatermark.com/algorithms/videoseal-v1"
+        },
+        "softBindingResolutionApis": [
+            "https://aiwatermark.com/api/v1/resolve"
+        ]
     }
 ]
