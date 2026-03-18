@@ -429,7 +429,7 @@
             "informationalUrl": "https://aiwatermark.com/algorithms/videoseal-v1"
         },
         "softBindingResolutionApis": [
-            "https://aiwatermark.com/api/v1/resolve"
+            "https://aiwatermark.com/api/v1"
         ]
     },
     {
@@ -451,7 +451,7 @@
             "informationalUrl": "https://aiwatermark.com/algorithms/pixelseal-v1"
         },
         "softBindingResolutionApis": [
-            "https://aiwatermark.com/api/v1/resolve"
+            "https://aiwatermark.com/api/v1"
         ]
     },
     {
@@ -474,7 +474,7 @@
             "informationalUrl": "https://aiwatermark.com/algorithms/audioseal-v1"
         },
         "softBindingResolutionApis": [
-            "https://aiwatermark.com/api/v1/resolve"
+            "https://aiwatermark.com/api/v1"
         ]
     }
 ]
