@@ -121,7 +121,7 @@
                     "type": "string",
                     "format": "uri"
                 },
-                "description": "A list of Soft Binding Resolution APIs supporting this algorithm"
+                "description": "A list of Soft Binding Resolution APIs supporting this algorithm. The referenced APIs shall comply with the standard Soft Binding Resolution API for C2PA Manifest Recovery (see https://spec.c2pa.org/specifications/specifications/2.3/softbinding/Decoupled.html#SBR-API) or with the C2PA Federated Lookup standard smart contract interface (see https://spec.c2pa.org/specifications/specifications/2.3/softbinding/Decoupled.html#_federated_lookup)"
             }
         },
         "required": [
