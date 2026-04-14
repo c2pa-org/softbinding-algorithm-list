@@ -445,7 +445,7 @@
             "image/webp"
         ],
         "entryMetadata": {
-            "description": "Neural image watermarking using Meta FAIR's PixelSeal model, providing perceptually invisible soft-binding watermarks in image content. Embeds a 256-bit payload robust to common image transformations. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API.",
+            "description": "Neural image watermarking using Meta FAIR's PixelSeal model, providing perceptually invisible soft-binding watermarks in image content. Embeds a 256-bit payload robust to common image transformations. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
             "dateEntered": "2026-03-08T00:00:00.000Z",
             "contact": "jonathan@aiwatermark.com",
             "informationalUrl": "https://aiwatermark.com/algorithms/pixelseal-v1"
