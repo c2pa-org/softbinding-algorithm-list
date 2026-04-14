@@ -423,7 +423,7 @@
             "video/webm"
         ],
         "entryMetadata": {
-            "description": "Neural video watermarking using Meta FAIR's VideoSeal model, providing perceptually invisible soft-binding watermarks in video content. Supports MP4/WebM. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API.",
+            "description": "Neural video watermarking using Meta FAIR's VideoSeal model, providing perceptually invisible soft-binding watermarks in video content. Supports MP4/WebM. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
             "dateEntered": "2026-03-08T00:00:00.000Z",
             "contact": "jonathan@aiwatermark.com",
             "informationalUrl": "https://aiwatermark.com/algorithms/videoseal-v1"
