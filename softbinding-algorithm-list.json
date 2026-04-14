@@ -468,7 +468,7 @@
             "audio/mp4"
         ],
         "entryMetadata": {
-            "description": "Neural audio watermarking using Meta FAIR's AudioSeal model, providing imperceptible soft-binding watermarks in audio content. Supports localized detection of watermarks within audio segments. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API.",
+            "description": "Neural audio watermarking using Meta FAIR's AudioSeal model, providing imperceptible soft-binding watermarks in audio content. Supports localized detection of watermarks within audio segments. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
             "dateEntered": "2026-03-08T00:00:00.000Z",
             "contact": "jonathan@aiwatermark.com",
             "informationalUrl": "https://aiwatermark.com/algorithms/audioseal-v1"
