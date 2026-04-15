@@ -414,8 +414,23 @@
         }
     },
     {
-        "identifier": 29,
-<<<<<<< add-aiwatermark-videoseal
+       "identifier": 29,
+       "alg": "com.writerslogic.zwc-watermark.1",
+        "type": "watermark",
+        "encodedMediaTypes": [
+            "text/plain",
+            "text/markdown",
+            "text/html"
+        ],
+        "entryMetadata": {
+            "description": "WritersLogic CPOP zero-width character (ZWC) watermark for text content. Embeds a truncated HMAC-SHA256 tag as zero-width Unicode characters (U+200B, U+200C, U+200D, U+FEFF) at deterministic word-boundary positions selected via HMAC-seeded Fisher-Yates shuffle. The tag binds the document content hash and Merkle Mountain Range root to the authorship evidence chain, enabling blind extraction without access to the original. Robust against copy-paste and re-encoding; invalidated by content modification (by design, as content changes require re-attestation). Part of the CPOP proof-of-process authorship attestation system implementing draft-condrey-cpop-protocol",
+            "dateEntered": "2026-03-18T20:00:00.000Z",
+            "contact": "david@writerslogic.com",
+            "informationalUrl": "https://writersproof.com/cpop/zwc-watermark"
+        }
+    },
+    {
+        "identifier": 30,
         "alg": "com.aiwatermark.videoseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -436,7 +451,7 @@
         ]
     },
     {
-        "identifier": 30,
+        "identifier": 31,
         "alg": "com.aiwatermark.pixelseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -458,7 +473,7 @@
         ]
     },
     {
-        "identifier": 31,
+        "identifier": 32,
         "alg": "com.aiwatermark.audioseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -479,20 +494,5 @@
         "softBindingResolutionApis": [
             "https://aiwatermark.com/api/v1"
         ]
-=======
-        "alg": "com.writerslogic.zwc-watermark.1",
-        "type": "watermark",
-        "encodedMediaTypes": [
-            "text/plain",
-            "text/markdown",
-            "text/html"
-        ],
-        "entryMetadata": {
-            "description": "WritersLogic CPOP zero-width character (ZWC) watermark for text content. Embeds a truncated HMAC-SHA256 tag as zero-width Unicode characters (U+200B, U+200C, U+200D, U+FEFF) at deterministic word-boundary positions selected via HMAC-seeded Fisher-Yates shuffle. The tag binds the document content hash and Merkle Mountain Range root to the authorship evidence chain, enabling blind extraction without access to the original. Robust against copy-paste and re-encoding; invalidated by content modification (by design, as content changes require re-attestation). Part of the CPOP proof-of-process authorship attestation system implementing draft-condrey-cpop-protocol",
-            "dateEntered": "2026-03-18T20:00:00.000Z",
-            "contact": "david@writerslogic.com",
-            "informationalUrl": "https://writersproof.com/cpop/zwc-watermark"
-        }
->>>>>>> main
     }
 ]
