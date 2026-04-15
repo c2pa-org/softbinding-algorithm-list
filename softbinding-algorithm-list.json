@@ -169,7 +169,9 @@
         "alg": "castLabs.watermark.1",
         "type": "watermark",
         "decodedMediaTypes": [
-            "video"
+            "video",
+            "image",
+            "audio"
         ],
         "entryMetadata": {
             "description": "castLabs Single Frame Forensic Watermarking",
