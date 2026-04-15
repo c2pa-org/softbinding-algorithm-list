@@ -399,7 +399,7 @@
             "informationalUrl": "https://en.markany.com/contentssecurity"
         }
     },
-    {    
+    {
         "identifier": 28,
         "alg": "com.verimatrix.watermark.1",
         "type": "watermark",
@@ -414,8 +414,8 @@
         }
     },
     {
-        "identifier": 29,
-        "alg": "com.writerslogic.zwc-watermark.1",
+       "identifier": 29,
+       "alg": "com.writerslogic.zwc-watermark.1",
         "type": "watermark",
         "encodedMediaTypes": [
             "text/plain",
@@ -428,5 +428,71 @@
             "contact": "david@writerslogic.com",
             "informationalUrl": "https://writersproof.com/cpop/zwc-watermark"
         }
+    },
+    {
+        "identifier": 30,
+        "alg": "com.aiwatermark.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "video/mp4",
+            "video/webm"
+        ],
+        "entryMetadata": {
+            "description": "Neural video watermarking using Meta FAIR's VideoSeal model, providing perceptually invisible soft-binding watermarks in video content. Supports MP4/WebM. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
+            "dateEntered": "2026-03-08T00:00:00.000Z",
+            "contact": "jonathan@aiwatermark.com",
+            "informationalUrl": "https://aiwatermark.com/algorithms/videoseal-v1"
+        },
+        "softBindingResolutionApis": [
+            "https://aiwatermark.com/api/v1"
+        ]
+    },
+    {
+        "identifier": 31,
+        "alg": "com.aiwatermark.pixelseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "encodedMediaTypes": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+        ],
+        "entryMetadata": {
+            "description": "Neural image watermarking using Meta FAIR's PixelSeal model, providing perceptually invisible soft-binding watermarks in image content. Embeds a 256-bit payload robust to common image transformations. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
+            "dateEntered": "2026-03-08T00:00:00.000Z",
+            "contact": "jonathan@aiwatermark.com",
+            "informationalUrl": "https://aiwatermark.com/algorithms/pixelseal-v1"
+        },
+        "softBindingResolutionApis": [
+            "https://aiwatermark.com/api/v1"
+        ]
+    },
+    {
+        "identifier": 32,
+        "alg": "com.aiwatermark.audioseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "encodedMediaTypes": [
+            "audio/mpeg",
+            "audio/wav",
+            "audio/flac",
+            "audio/mp4"
+        ],
+        "entryMetadata": {
+            "description": "Neural audio watermarking using Meta FAIR's AudioSeal model, providing imperceptible soft-binding watermarks in audio content. Supports localized detection of watermarks within audio segments. Integrates with C2PA manifest resolution via the AIWatermark Soft Binding Resolution API",
+            "dateEntered": "2026-03-08T00:00:00.000Z",
+            "contact": "jonathan@aiwatermark.com",
+            "informationalUrl": "https://aiwatermark.com/algorithms/audioseal-v1"
+        },
+        "softBindingResolutionApis": [
+            "https://aiwatermark.com/api/v1"
+        ]
     }
 ]
