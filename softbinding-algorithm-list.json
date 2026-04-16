@@ -536,5 +536,19 @@
             "contact": "opensource@meta.com",
             "informationalUrl": "https://github.com/facebookresearch/videoseal"
         }
+    },
+    {
+        "identifier": 36,
+        "alg": "com.meta.audioseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "entryMetadata": {
+            "description": "Meta AudioSeal localized audio watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/audioseal"
+        }
     }
 ]
