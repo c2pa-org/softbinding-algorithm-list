@@ -494,5 +494,18 @@
         "softBindingResolutionApis": [
             "https://aiwatermark.com/api/v1"
         ]
-    }
+    },
+    {
+        "identifier": 29,
+      "alg": "eu.sasha.softbinding.v1",
+      "type": "watermark",
+      "decodedMediaTypes": ["image"],
+  "entryMetadata": {
+    "description": "Invisible watermarking technology for image and video assets, enabling C2PA manifest recovery and content provenance verification after metadata stripping or transcoding.",
+    "categories": ["eu.sasha.watermark"],
+    "dateEntered": "2026-04-16T00:00:00.000Z",
+    "contact": "contact@sasha.eu",
+    "informationalUrl": "https://sasha.eu/technology"
+  }
+}
 ]
