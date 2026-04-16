@@ -508,5 +508,19 @@
             "contact": "opensource@meta.com",
             "informationalUrl": "https://github.com/facebookresearch/videoseal"
         }
+    },
+    {
+        "identifier": 34,
+        "alg": "com.meta.chunkyseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Meta ChunkySeal high capacity image watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/videoseal"
+        }
     }
 ]
