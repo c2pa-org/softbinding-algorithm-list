@@ -7,7 +7,7 @@ The soft binding assertion contains a field `alg` which uniquely identifies the 
 ## Guidelines for submitting a new entry
 
 ### Pull request
-Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests are made by submitting a Pull Request (PR) that adds to, or edits, the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list-schema.json).
+Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests are made by submitting a Pull Request (PR) that adds to, or edits, the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list.schema.json).
 
 ### Selection rules
 
@@ -16,7 +16,7 @@ The C2PA Technical Working Group will approve and merge PRs in accordance with i
 C2PA's Technical Working Group may also decide to remove malicious or non-conformant entries from the list of approved soft binding algorithms.
 
 For a PR (new entry or update) to be approved the following criteria are important:
-- The entry shall conform with the [schema](softbinding-algorithm-list-schema.json) and shall include all the mandatory fields.
+- The entry shall conform with the [schema](softbinding-algorithm-list.schema.json) and shall include all the mandatory fields.
 - The entry shall not appear to be malicious (e.g., spam) or harmful.
 - The PR shall be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
 - The provided URLs shall successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`).
