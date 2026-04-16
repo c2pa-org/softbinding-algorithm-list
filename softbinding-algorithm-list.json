@@ -494,5 +494,75 @@
         "softBindingResolutionApis": [
             "https://aiwatermark.com/api/v1"
         ]
+    },
+    {
+        "identifier": 33,
+        "alg": "com.meta.pixelseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Meta PixelSeal invisible image watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/videoseal"
+        }
+    },
+    {
+        "identifier": 34,
+        "alg": "com.meta.chunkyseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Meta ChunkySeal high capacity image watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/videoseal"
+        }
+    },
+    {
+        "identifier": 35,
+        "alg": "com.meta.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Meta VideoSeal video watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/videoseal"
+        }
+    },
+    {
+        "identifier": 36,
+        "alg": "com.meta.audioseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "entryMetadata": {
+            "description": "Meta AudioSeal localized audio watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/audioseal"
+        }
+    },
+    {
+        "identifier": 37,
+        "alg": "com.meta.textseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "text"
+        ],
+        "entryMetadata": {
+            "description": "Meta TextSeal text watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/textseal"
+        }
     }
 ]
