@@ -494,5 +494,19 @@
         "softBindingResolutionApis": [
             "https://aiwatermark.com/api/v1"
         ]
+    },
+    {
+        "identifier": 33,
+        "alg": "com.meta.pixelseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Meta PixelSeal invisible image watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/videoseal"
+        }
     }
 ]
