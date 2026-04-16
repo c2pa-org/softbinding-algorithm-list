@@ -550,5 +550,19 @@
             "contact": "opensource@meta.com",
             "informationalUrl": "https://github.com/facebookresearch/audioseal"
         }
+    },
+    {
+        "identifier": 37,
+        "alg": "com.meta.textseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "text"
+        ],
+        "entryMetadata": {
+            "description": "Meta TextSeal text watermarking",
+            "dateEntered": "2026-04-16T09:00:00.000Z",
+            "contact": "opensource@meta.com",
+            "informationalUrl": "https://github.com/facebookresearch/textseal"
+        }
     }
 ]
