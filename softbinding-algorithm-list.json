@@ -110,7 +110,7 @@
     },
     {
         "identifier": 8,
-        "alg": "ai.trufo.pawprint.wm.classic",
+        "alg": "ai.trufo.pawprint.watermark",
         "type": "watermark",
         "decodedMediaTypes": [
             "image",
@@ -118,7 +118,7 @@
             "video"
         ],
         "entryMetadata": {
-            "description": "PawPrint is Trufo's multimodal soft-binding service for content provenance. The Classic Watermark algorithm runs easily on all systems.",
+            "description": "PawPrint neural watermarking for images, audio, and video. Imperceptible, with a 44/88 bit payload robust to compression, cropping, rotation, splicing, time/space scaling, common filters, and moderate AI transformations.",
             "dateEntered": "2024-08-14T15:00:00.000Z",
             "contact": "support@trufo.ai",
             "informationalUrl": "https://trufo.ai/watermarks"
@@ -126,15 +126,15 @@
     },
     {
         "identifier": 9,
-        "alg": "ai.trufo.pawprint.wm.ml",
-        "type": "watermark",
+        "alg": "ai.trufo.pawprint.fingerprint",
+        "type": "fingerprint",
         "decodedMediaTypes": [
             "image",
             "audio",
             "video"
         ],
         "entryMetadata": {
-            "description": "PawPrint is Trufo's multimodal soft-binding service for content provenance. The ML Watermark algorithm offers the highest performance on AI-ready systems.",
+            "description": "PawPrint neural fingerprinting for images, audio, and video. Generates a perceptual content signature that can be registered in or queried against Trufo's federated provenance ledgers for content matching and attribution.",
             "dateEntered": "2024-08-14T15:00:00.000Z",
             "contact": "support@trufo.ai",
             "informationalUrl": "https://trufo.ai/watermarks"
@@ -618,34 +618,6 @@
             "dateEntered": "2026-06-04T00:00:00.000Z",
             "contact": "support@cognitive-proof.com",
             "informationalUrl": "https://github.com/Cognitive-Proof/VSRMark"
-        }
-    },
-    {
-        "identifier": 40,
-        "alg": "ai.trufo.pawprint.fp.classic",
-        "type": "fingerprint",
-        "decodedMediaTypes": [
-            "image"
-        ],
-        "entryMetadata": {
-            "description": "PawPrint is Trufo's multimodal soft-binding service for content provenance. The Classic Fingerprint algorithm runs easily on all systems.",
-            "dateEntered": "2026-06-16T00:00:00.000Z",
-            "contact": "support@trufo.ai",
-            "informationalUrl": "https://trufo.ai/watermarks"
-        }
-    },
-    {
-        "identifier": 41,
-        "alg": "ai.trufo.pawprint.fp.ml",
-        "type": "fingerprint",
-        "decodedMediaTypes": [
-            "image"
-        ],
-        "entryMetadata": {
-            "description": "PawPrint is Trufo's multimodal soft-binding service for content provenance. The ML Fingerprint algorithm offers the highest performance on AI-ready systems.",
-            "dateEntered": "2026-06-16T00:00:00.000Z",
-            "contact": "support@trufo.ai",
-            "informationalUrl": "https://trufo.ai/watermarks"
         }
     }
 ]
