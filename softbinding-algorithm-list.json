@@ -619,5 +619,21 @@
             "contact": "support@cognitive-proof.com",
             "informationalUrl": "https://github.com/Cognitive-Proof/VSRMark"
         }
+    },
+    {
+        "identifier": 41,
+        "alg": "com.writerslogic.text-fingerprint.1",
+        "type": "fingerprint",
+        "encodedMediaTypes": [
+            "text/plain",
+            "text/markdown",
+            "text/html"
+        ],
+        "entryMetadata": {
+            "description": "WritersLogic CPoE robust text fingerprint. Computes a 256-bit SimHash over overlapping character 4-grams of normalized text and records the hex-encoded value as a fingerprint-type soft binding for manifest recovery. Normalization applies Unicode NFC, removes zero-width and formatting characters (U+200B, U+200C, U+200D, U+FEFF, U+2060, variation selectors U+FE00-U+FE0F), lowercases, collapses whitespace, and strips punctuation, so the fingerprint is unchanged by reformatting, re-encoding, case and whitespace edits, and zero-width-character injection. Character 4-grams keep a single-word edit local, so the fingerprint stays stable even on short, one-sentence text. The document is additionally split into overlapping 512-character windows (50% overlap) that are each fingerprinted, recorded as scoped blocks (start, length) alongside the whole-document block, so an extracted excerpt or truncated copy can be matched against a window block. Two fingerprints match when their Hamming distance is at most 32 bits (12.5%), identifying the same content under light edits. Robust to edits and formatting but not to paraphrase. Part of the CPoE proof-of-effort authorship attestation system implementing draft-condrey-cpoe-protocol.",
+            "dateEntered": "2026-06-22T00:00:00.000Z",
+            "contact": "david@writerslogic.com",
+            "informationalUrl": "https://docs.writerslogic.com/soft-binding/text-fingerprint"
+        }
     }
 ]
