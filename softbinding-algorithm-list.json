@@ -621,7 +621,7 @@
         }
     },
     {
-        "identifier": 40,
+        "identifier": 41,
         "alg": "com.writerslogic.text-fingerprint.1",
         "type": "fingerprint",
         "encodedMediaTypes": [
