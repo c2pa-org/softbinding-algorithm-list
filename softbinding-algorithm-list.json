@@ -700,5 +700,21 @@
             "contact": "david@writerslogic.com",
             "informationalUrl": "https://docs.writerslogic.com/soft-binding/text-minhash"
         }
+    },
+    {
+        "identifier": 45,
+        "alg": "com.writerslogic.text-semantic.1",
+        "type": "fingerprint",
+        "encodedMediaTypes": [
+            "text/plain",
+            "text/markdown",
+            "text/html"
+        ],
+        "entryMetadata": {
+            "description": "WritersLogic CPoE semantic text fingerprint for paraphrase- and translation-robust manifest recovery. Encodes each text window with a pinned open embedding model under fixed integer (int8) inference and binarizes the unit-normalized vector to a 256-bit signature via seeded random-hyperplane LSH, so Hamming distance approximates cosine distance and semantically equivalent text yields low-distance signatures. The value is fully specified by the pinned model weights hash, tokenizer, pooling, quantization scheme, and projection seed together with published cross-platform reproducibility test vectors, so any verifier reproduces it bit-for-bit. Used as corroborating evidence, not a sole identifier: a semantic match is confirmed against a lexical or structural fingerprint before provenance is asserted. Robust to paraphrase and translation; insufficient signal on very short heavily paraphrased text. Part of the CPoE proof-of-effort authorship attestation system implementing draft-condrey-cpoe-protocol.",
+            "dateEntered": "2026-07-07T00:00:00.000Z",
+            "contact": "david@writerslogic.com",
+            "informationalUrl": "https://docs.writerslogic.com/soft-binding/text-semantic"
+        }
     }
 ]
