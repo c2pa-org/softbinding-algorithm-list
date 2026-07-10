@@ -717,7 +717,7 @@
             "informationalUrl": "https://blockfact.io"
         },
         "softBindingResolutionApis": [
-            "https://jhsw78dryc.execute-api.us-east-1.amazonaws.com/api/soft-binding/v1"
+            "https://api.blockfact.io/api/soft-binding/v1"
         ]
     }
 ]
