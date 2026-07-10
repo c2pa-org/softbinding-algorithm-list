@@ -700,5 +700,24 @@
             "contact": "david@writerslogic.com",
             "informationalUrl": "https://docs.writerslogic.com/soft-binding/text-minhash"
         }
+    },
+    {
+        "identifier": 45,
+        "alg": "io.blockfact.audio.watermark.32",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "image",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "BlockFact invisible watermarking for audio, image, and video provenance. Embeds a 32-bit lookup key derived from blockchain registration hash, enabling C2PA manifest recovery via the BlockFact Soft Binding Resolution API. Designed for robust provenance binding across compression, transcoding, and format conversion.",
+            "dateEntered": "2026-07-10T16:00:00.000Z",
+            "contact": "egbert@blockfact.io",
+            "informationalUrl": "https://blockfact.io"
+        },
+        "softBindingResolutionApis": [
+            "https://jhsw78dryc.execute-api.us-east-1.amazonaws.com/api/soft-binding/v1"
+        ]
     }
 ]
