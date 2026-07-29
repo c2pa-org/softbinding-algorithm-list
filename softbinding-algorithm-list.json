@@ -733,6 +733,26 @@
             "contact": "c2pa@Doverunner.com",
             "informationalUrl": "https://docs.doverunner.com/content-security/"
         }
-
-    }    
+    },
+    {
+        "identifier": 48,
+        "alg": "com.joinmonolith.sha256",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image",
+            "video",
+            "audio",
+            "text",
+            "application"
+        ],
+        "entryMetadata": {
+            "description": "Monolith SHA-256 content fingerprint for C2PA manifest recovery",
+            "dateEntered": "2026-07-29T00:00:00.000Z",
+            "contact": "contact@joinmonolith.com",
+            "informationalUrl": "https://docs.joinmonolith.com/guide/fingerprinting"
+        },
+        "softBindingResolutionApis": [
+            "https://api.joinmonolith.com/api/c2pa"
+        ]
+    }
 ]
