@@ -721,7 +721,7 @@
         ]
     },
     {
-        "identifier": 46,
+        "identifier": 47,
         "alg": "com.writerslogic.text-watermark-semantic.1",
         "type": "watermark",
         "encodedMediaTypes": [
