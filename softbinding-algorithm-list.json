@@ -721,6 +721,20 @@
         ]
     },
     {
+        "identifier": 46,
+        "alg": "com.doverunner.watermark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "DoveRunner's forensic watermarking solution delivers invisible, tamper-resilient traceability into video content — from enterprise distribution pipelines to end-consumer playback",
+            "dateEntered": "2026-07-27T14:00:00.000Z",
+            "contact": "c2pa@Doverunner.com",
+            "informationalUrl": "https://docs.doverunner.com/content-security/"
+        }
+    },
+    {
         "identifier": 47,
         "alg": "com.writerslogic.text-watermark-semantic.1",
         "type": "watermark",
@@ -735,5 +749,26 @@
             "contact": "david@writerslogic.com",
             "informationalUrl": "https://docs.writerslogic.com/soft-binding/text-watermark-semantic"
         }
+    },
+    {
+        "identifier": 48,
+        "alg": "com.joinmonolith.sha256",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image",
+            "video",
+            "audio",
+            "text",
+            "application"
+        ],
+        "entryMetadata": {
+            "description": "Monolith SHA-256 content fingerprint for C2PA manifest recovery",
+            "dateEntered": "2026-07-29T00:00:00.000Z",
+            "contact": "contact@joinmonolith.com",
+            "informationalUrl": "https://docs.joinmonolith.com/guide/fingerprinting"
+        },
+        "softBindingResolutionApis": [
+            "https://api.joinmonolith.com/api/c2pa"
+        ]
     }
 ]
