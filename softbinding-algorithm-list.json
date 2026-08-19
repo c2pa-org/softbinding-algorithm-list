@@ -122,7 +122,10 @@
             "dateEntered": "2024-08-14T15:00:00.000Z",
             "contact": "support@trufo.ai",
             "informationalUrl": "https://trufo.ai/watermarks"
-        }
+        },
+        "softBindingResolutionApis": [
+            "https://c2pa.trufo.ai/v1"
+        ]
     },
     {
         "identifier": 9,
@@ -138,7 +141,10 @@
             "dateEntered": "2024-08-14T15:00:00.000Z",
             "contact": "support@trufo.ai",
             "informationalUrl": "https://trufo.ai/watermarks"
-        }
+        },
+        "softBindingResolutionApis": [
+            "https://c2pa.trufo.ai/v1"
+        ]
     },
     {
         "identifier": 10,
