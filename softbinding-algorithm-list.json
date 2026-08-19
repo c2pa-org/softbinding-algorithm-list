@@ -772,7 +772,7 @@
         ]
     },
     {
-        "identifier": 49,
+        "identifier": 51,
         "alg": "io.diker.sigi.v1",
         "type": "watermark",
         "decodedMediaTypes": [
