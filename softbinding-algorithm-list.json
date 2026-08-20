@@ -776,6 +776,21 @@
         "softBindingResolutionApis": [
             "https://api.joinmonolith.com/api/c2pa"
         ]
+    },
+    {
+        "identifier": 50,
+        "alg": "me.reconize.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Reconize deployment of the VideoSeal invisible watermark (Meta AI open research), embedding a 256-bit identity payload into image and video pixels via on-device Core ML. Used by the Reconize Mac app (C2PA conformant Generator Product) to bind C2PA manifests to pixels so provenance survives metadata stripping.",
+            "dateEntered": "2026-08-10T00:00:00.000Z",
+            "contact": "hello@reconize.me",
+            "informationalUrl": "https://reconize.me/softbinding.html"
+        }
     }
 ,
     {
