@@ -778,6 +778,18 @@
         ]
     },
     {
+      "identifier": 49,
+      "alg": "com.museblossom.contentsdefence.1",
+      "type": "watermark",
+      "decodedMediaTypes": ["image"],
+      "entryMetadata": {
+        "description": "Contents Defence invisible image watermark, used to recover the associated C2PA manifest when embedded metadata is absent.",
+        "dateEntered": "2026-08-10T00:00:00.000Z",
+        "contact": "contact@museblossom.com",
+        "informationalUrl": "https://museblossom.com/about"
+      }
+    },
+    {
         "identifier": 50,
         "alg": "me.reconize.videoseal.1",
         "type": "watermark",
@@ -791,18 +803,19 @@
             "contact": "hello@reconize.me",
             "informationalUrl": "https://reconize.me/softbinding.html"
         }
-    }
-,
+    },
     {
-      "identifier": 49,
-      "alg": "com.museblossom.contentsdefence.1",
-      "type": "watermark",
-      "decodedMediaTypes": ["image"],
-      "entryMetadata": {
-        "description": "Contents Defence invisible image watermark, used to recover the associated C2PA manifest when embedded metadata is absent.",
-        "dateEntered": "2026-08-10T00:00:00.000Z",
-        "contact": "contact@museblossom.com",
-        "informationalUrl": "https://museblossom.com/about"
-      }
+        "identifier": 51,
+        "alg": "io.diker.sigi.v1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Sigi invisible watermarking engine by Okeanos B.V.",
+            "dateEntered": "2026-08-11T00:00:00.000Z",
+            "contact": "support@diker.io",
+            "informationalUrl": "https://diker.io/sigi"
+        }
     }
 ]
