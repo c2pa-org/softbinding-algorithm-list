@@ -25,7 +25,7 @@ jobs:
 
       - name: Check links in file
         id: check
-        run: python scripts/check_links.py --file "$FILE_TO_CHECK"
+        run: python check_links.py --file "$FILE_TO_CHECK"
         continue-on-error: true
 
       - name: Upload report artifact
