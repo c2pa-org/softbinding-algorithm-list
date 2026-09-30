@@ -18,6 +18,7 @@
                         "org.example.watermarking"
                     ],
                     "dateEntered": "2025-01-01T00:00:00Z",
+                    "dateUpdated": "2026-09-30T00:00:00Z",
                     "contact": "contact@example.com",
                     "informationalUrl": "https://example.com/softbinding/alg1"
                 },
@@ -97,6 +98,11 @@
                         "type": "string",
                         "format": "date-time",
                         "description": "Date of entry for this algorithm"
+                    },
+                    "dateUpdated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date this algorithm entry was last updated"
                     },
                     "contact": {
                         "type": "string",
