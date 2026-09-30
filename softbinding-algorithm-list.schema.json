@@ -137,21 +137,19 @@
                                     "format": "uri",
                                     "description": "A URL to the benchmarking harness"
                                 },
-                                "date": {
-                                    "type": "string",
-                                    "format": "date",
-                                    "description": "The date the benchmark was performed"
-                                },
                                 "results": {
                                     "type": "string",
                                     "format": "uri",
                                     "description": "A URL containing the benchmark results"
+                                },
+                                "date": {
+                                    "type": "string",
+                                    "format": "date",
+                                    "description": "The date the benchmark was performed"
                                 }
                             },
                             "required": [
                                 "methodology",
-                                "corpus",
-                                "harness",
                                 "date",
                                 "results"
                             ]
