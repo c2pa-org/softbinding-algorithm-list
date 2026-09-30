@@ -19,7 +19,14 @@
                     ],
                     "dateEntered": "2025-01-01T00:00:00Z",
                     "contact": "contact@example.com",
-                    "informationalUrl": "https://example.com/softbinding/alg1"
+                    "informationalUrl": "https://example.com/softbinding/alg1",
+                    "externalValidation": [
+                        {
+                            "uri": "https://example.com/softbinding/alg1/benchmark-results.pdf",
+                            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                            "type": "benchmark"
+                        }
+                    ]
                 },
                 "softBindingResolutionApis": [
                     "https://resolver.example.com/alg1"
@@ -106,6 +113,34 @@
                         "type": "string",
                         "format": "uri",
                         "description": "A web page containing more details about the algorithm"
+                    },
+                    "externalValidation": {
+                        "type": "array",
+                        "minItems": 1,
+                        "description": "A list of references to externally hosted material that validates the algorithm's claimed capabilities (e.g., benchmark results, audits, certifications)",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "uri": {
+                                    "type": "string",
+                                    "format": "uri",
+                                    "description": "Location of the external validation material"
+                                },
+                                "sha256": {
+                                    "type": "string",
+                                    "pattern": "^[a-fA-F0-9]{64}$",
+                                    "description": "Hex-encoded SHA-256 hash of the content at the referenced URI, allowing consumers to detect changes to it"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "description": "The kind of external validation (e.g., `benchmark`, `audit`, `certification`)"
+                                }
+                            },
+                            "required": [
+                                "uri",
+                                "type"
+                            ]
+                        }
                     }
                 },
                 "required": [
