@@ -20,11 +20,12 @@
                     "dateEntered": "2025-01-01T00:00:00Z",
                     "contact": "contact@example.com",
                     "informationalUrl": "https://example.com/softbinding/alg1",
-                    "externalValidation": [
+                    "externalEvidence": [
                         {
-                            "uri": "https://example.com/softbinding/alg1/benchmark-results.pdf",
-                            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                            "type": "benchmark"
+                            "url": "https://example.com/softbinding/alg1/benchmark-results.pdf",
+                            "type": "com.example.evidence.benchmark",
+                            "alg": "sha256",
+                            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
                         }
                     ]
                 },
@@ -114,32 +115,49 @@
                         "format": "uri",
                         "description": "A web page containing more details about the algorithm"
                     },
-                    "externalValidation": {
+                    "externalEvidence": {
                         "type": "array",
                         "minItems": 1,
-                        "description": "A list of references to externally hosted material that validates the algorithm's claimed capabilities (e.g., benchmark results, audits, certifications)",
+                        "description": "A list of references to externally hosted evidence supporting the algorithm's stated capabilities (e.g., benchmark results, audits, certifications). This evidence is provided by the entry owner and is informational only",
                         "items": {
                             "type": "object",
                             "properties": {
-                                "uri": {
+                                "url": {
                                     "type": "string",
                                     "format": "uri",
-                                    "description": "Location of the external validation material"
-                                },
-                                "sha256": {
-                                    "type": "string",
-                                    "pattern": "^[a-fA-F0-9]{64}$",
-                                    "description": "Hex-encoded SHA-256 hash of the content at the referenced URI, allowing consumers to detect changes to it"
+                                    "description": "Location of the external evidence"
                                 },
                                 "type": {
                                     "type": "string",
-                                    "description": "The kind of external validation (e.g., `benchmark`, `audit`, `certification`)"
+                                    "pattern": "^[A-Za-z]{2,63}(?:\\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+\\.?$",
+                                    "description": "The kind of evidence referenced. The format follows the entity-specific namespace as specified for C2PA Assertions labels (e.g., `org.example.evidence.benchmark`)"
+                                },
+                                "alg": {
+                                    "enum": [
+                                        "sha256",
+                                        "sha384",
+                                        "sha512"
+                                    ],
+                                    "description": "Identifier of the hash algorithm used to compute `hash`, taken from the C2PA hash algorithm list"
+                                },
+                                "hash": {
+                                    "type": "string",
+                                    "pattern": "^[a-fA-F0-9]+$",
+                                    "description": "Hex-encoded hash of the content at `url` at the time the entry was written or last updated, computed with `alg`"
                                 }
                             },
                             "required": [
-                                "uri",
+                                "url",
                                 "type"
-                            ]
+                            ],
+                            "dependentRequired": {
+                                "alg": [
+                                    "hash"
+                                ],
+                                "hash": [
+                                    "alg"
+                                ]
+                            }
                         }
                     }
                 },
