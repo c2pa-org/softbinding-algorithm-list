@@ -1,8 +1,8 @@
-name: Check Links Quarterly
+name: Check Links Monthly
 
 on:
   schedule:
-    - cron: '0 0 1 */3 *'   # 00:00 UTC on the 1st of Jan, Apr, Jul, Oct
+    - cron: '17 3 1 * *'    # 03:17 UTC on the first day of each month
   workflow_dispatch:        # lets you trigger a run manually from the Actions tab
 
 permissions:
@@ -33,37 +33,85 @@ jobs:
         continue-on-error: true
 
       - name: Upload report artifact
+        if: always() && hashFiles('link_check_report.json') != ''
         uses: actions/upload-artifact@v4
         with:
           name: link-check-report
           path: link_check_report.json
 
-      - name: Create or update issue on broken links
-        if: steps.check.outcome == 'failure'
+      - name: Reconcile broken-links issue
+        if: steps.check.outputs.result != ''
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
             const report = JSON.parse(fs.readFileSync('link_check_report.json', 'utf8'));
             const broken = report.results.filter(r => r.state === 'broken');
+            const blocked = report.results.filter(r => r.state === 'blocked');
+            const unreachable = report.results.filter(r => r.state === 'unreachable');
 
             const title = `Broken links found in ${report.file}`;
-            const body = [
-              `The quarterly link check found ${broken.length} broken link(s) in \`${report.file}\`:`,
-              '',
-              ...broken.map(b => `- [ ] ${b.url} — ${b.error}`),
-              '',
-              `_Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`
-            ].join('\n');
-
-            const { data: issues } = await github.rest.issues.listForRepo({
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: 'broken-links'
+              per_page: 100
             });
+            const existing = issues.find(i => !i.pull_request && i.title === title);
 
-            const existing = issues.find(i => i.title === title);
+            if (!broken.length) {
+              if (existing && !blocked.length && !unreachable.length) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  body: `All links passed the latest check. Closing this issue.\n\n_Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  state: 'closed'
+                });
+              } else if (existing) {
+                const unverified = [...blocked, ...unreachable];
+                const table = items => [
+                  '| Algorithm | Field | URL | Result |',
+                  '|---|---|---|---|',
+                  ...items.map(item => `| ${item.algorithm} | ${item.field} | ${item.url} | ${item.error} |`)
+                ].join('\n');
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  body: [
+                    'The latest check found no confirmed broken links, but some URLs could not be verified.',
+                    '',
+                    table(unverified),
+                    '',
+                    `_Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`
+                  ].join('\n')
+                });
+              }
+              return;
+            }
+
+            const table = items => [
+              '| Algorithm | Field | URL | Result |',
+              '|---|---|---|---|',
+              ...items.map(item => `| ${item.algorithm} | ${item.field} | ${item.url} | ${item.error} |`)
+            ].join('\n');
+            const sections = [
+              `The monthly link check found ${broken.length} confirmed broken link(s) in \`${report.file}\`.`,
+              '',
+              '## Broken',
+              '',
+              table(broken)
+            ];
+            if (blocked.length) sections.push('', '## Blocked', '', table(blocked));
+            if (unreachable.length) sections.push('', '## Unreachable', '', table(unreachable));
+            sections.push('', `_Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`);
+            const body = sections.join('\n');
 
             if (existing) {
               await github.rest.issues.update({
@@ -83,5 +131,9 @@ jobs:
             }
 
       - name: Fail workflow if broken links were found
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outputs.result == 'broken'
+        run: exit 1
+
+      - name: Fail workflow if the checker failed
+        if: steps.check.outcome == 'failure' && steps.check.outputs.result == ''
         run: exit 1
