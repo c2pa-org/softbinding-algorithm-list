@@ -23,9 +23,25 @@
                     "externalEvidence": [
                         {
                             "url": "https://example.com/softbinding/alg1/benchmark-results.pdf",
-                            "type": "com.example.evidence.benchmark",
+                            "type": "com.example.evidence.benchmark.report",
                             "alg": "sha256",
-                            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                            "hash": "799d4203122d296792b8005e2ae0dab7757ed9a0083b166bf19e0e400753bd38"
+                        },
+                        {
+                            "url": "https://example.com/softbinding/alg1/robustness.intoto.jsonl",
+                            "type": "com.example.evidence.attestation.in-toto",
+                            "alg": "sha384",
+                            "hash": "7470cab1248a1af9c48f96f6917ac466e5624a06dac8b1efcdde5f33dfccb766c45fd81de0a28173e370c2c65e929190"
+                        },
+                        {
+                            "url": "https://lab.example.org/credentials/alg1-robustness.vc.json",
+                            "type": "org.example.evidence.credential.vc",
+                            "alg": "sha256",
+                            "hash": "d512300b8eba83bfa9a9a0148cd7d1998f7ee81f3ed4bdadbe32d601c5b608fd"
+                        },
+                        {
+                            "url": "https://benchmark.example.org/leaderboards/image-watermarks",
+                            "type": "org.example.evidence.benchmark.leaderboard"
                         }
                     ]
                 },
