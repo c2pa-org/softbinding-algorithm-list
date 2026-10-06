@@ -19,7 +19,20 @@
                     ],
                     "dateEntered": "2025-01-01T00:00:00Z",
                     "contact": "contact@example.com",
-                    "informationalUrl": "https://example.com/softbinding/alg1"
+                    "informationalUrl": "https://example.com/softbinding/alg1",
+                    "benchmarkingInformation": [
+                        {
+                            "description": "Robustness benchmark covering common image transformations",
+                            "coveredMediaTypes": [
+                                "image"
+                            ],
+                            "benchmarkDate": "2026-07-10",
+                            "results": {
+                                "url": "https://example.com/softbinding/alg1/benchmark-results.json",
+                                "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+                            }
+                        }
+                    ]
                 },
                 "softBindingResolutionApis": [
                     "https://resolver.example.com/alg1"
@@ -106,6 +119,66 @@
                         "type": "string",
                         "format": "uri",
                         "description": "A web page containing more details about the algorithm"
+                    },
+                    "benchmarkingInformation": {
+                        "type": "array",
+                        "minItems": 1,
+                        "description": "A list of benchmarking records that help explain the algorithm's measured capabilities",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "description": {
+                                    "type": "string",
+                                    "description": "Human readable description of the algorithm"
+                                },
+                                "coveredMediaTypes": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "enum": [
+                                            "application",
+                                            "audio",
+                                            "image",
+                                            "model",
+                                            "text",
+                                            "video"
+                                        ],
+                                        "description": "IANA top level media type addressed by this benchmark"
+                                    }
+                                },
+                                "benchmarkDate": {
+                                    "type": "string",
+                                    "format": "date",
+                                    "description": "The date the benchmark was performed"
+                                },
+                                "results": {
+                                    "type": "object",
+                                    "description": "A link to the benchmark results and its SHA-256 content digest",
+                                    "properties": {
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "description": "A URL containing the benchmark results"
+                                        },
+                                        "sha256": {
+                                            "type": "string",
+                                            "pattern": "^[A-Fa-f0-9]{64}$",
+                                            "description": "SHA-256 digest of the benchmark results content, encoded as 64 hexadecimal characters"
+                                        }
+                                    },
+                                    "required": [
+                                        "url",
+                                        "sha256"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "description",
+                                "coveredMediaTypes",
+                                "benchmarkDate",
+                                "results"
+                            ]
+                        }
                     }
                 },
                 "required": [
