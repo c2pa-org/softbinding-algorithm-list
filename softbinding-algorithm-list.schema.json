@@ -22,11 +22,14 @@
                     "informationalUrl": "https://example.com/softbinding/alg1",
                     "benchmarkingInformation": [
                         {
-                            "methodology": "https://github.com/writerslogic/c2pa-text-binding/blob/main/ROBUSTNESS.md",
-                            "corpus": "PAN'26 text-watermarking (Zenodo 18620130)",
-                            "harness": "https://github.com/writerslogic/c2pa-text-binding/blob/main/examples/robustness_bench.rs",
-                            "date": "2026-07-10",
-                            "results": "https://example.com/softbinding/alg1/benchmark-results"
+                            "coveredMediaTypes": [
+                                "image"
+                            ],
+                            "benchmarkDate": "2026-07-10",
+                            "results": {
+                                "url": "https://example.com/softbinding/alg1/benchmark-results.json",
+                                "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+                            }
                         }
                     ]
                 },
@@ -123,34 +126,50 @@
                         "items": {
                             "type": "object",
                             "properties": {
-                                "methodology": {
-                                    "type": "string",
-                                    "format": "uri",
-                                    "description": "A URL describing the benchmarking methodology"
+                                "coveredMediaTypes": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "enum": [
+                                            "application",
+                                            "audio",
+                                            "image",
+                                            "model",
+                                            "text",
+                                            "video"
+                                        ],
+                                        "description": "IANA top level media type addressed by this benchmark"
+                                    }
                                 },
-                                "corpus": {
-                                    "type": "string",
-                                    "description": "A description of the corpus or dataset used for benchmarking"
-                                },
-                                "harness": {
-                                    "type": "string",
-                                    "format": "uri",
-                                    "description": "A URL to the benchmarking harness"
-                                },
-                                "results": {
-                                    "type": "string",
-                                    "format": "uri",
-                                    "description": "A URL containing the benchmark results"
-                                },
-                                "date": {
+                                "benchmarkDate": {
                                     "type": "string",
                                     "format": "date",
                                     "description": "The date the benchmark was performed"
+                                },
+                                "results": {
+                                    "type": "object",
+                                    "description": "A link to the benchmark results and its SHA-256 content digest",
+                                    "properties": {
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "description": "A URL containing the benchmark results"
+                                        },
+                                        "sha256": {
+                                            "type": "string",
+                                            "pattern": "^[A-Fa-f0-9]{64}$",
+                                            "description": "SHA-256 digest of the benchmark results content, encoded as 64 hexadecimal characters"
+                                        }
+                                    },
+                                    "required": [
+                                        "url",
+                                        "sha256"
+                                    ]
                                 }
                             },
                             "required": [
-                                "methodology",
-                                "date",
+                                "coveredMediaTypes",
+                                "benchmarkDate",
                                 "results"
                             ]
                         }
