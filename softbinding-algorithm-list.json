@@ -847,21 +847,7 @@
             "informationalUrl": "https://arxiv.org/abs/2607.05261"
         }
     },
-    {
-        "identifier": 55,
-        "alg": "com.adobe.trustmark.F",
-        "type": "watermark",
-        "decodedMediaTypes": [
-            "image"
-        ],
-        "entryMetadata": {
-            "description": "Adobe FiLMCAM Conditional Access Watermarking / Trustmark variant F ",
-            "dateEntered": "2026-10-14T14:00:00.000Z",
-            "contact": "collomos@adobe.com",
-            "informationalUrl": "https://github.com/adobe/trustmark/"
-          }
-    },
-    {
+        {
         "identifier": 54,
         "alg": "be.immostory.videoseal.1",
         "type": "watermark",
@@ -877,5 +863,19 @@
             "contact": "support@immostory.ai",
             "informationalUrl": "https://immostory.ai/en/provenance"
         }
+    },
+    {
+        "identifier": 55,
+        "alg": "com.adobe.trustmark.F",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe FiLMCAM Conditional Access Watermarking / Trustmark variant F ",
+            "dateEntered": "2026-10-14T14:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://github.com/adobe/trustmark/"
+          }
     }
 ]
