@@ -848,7 +848,7 @@
         }
     },
     {
-        "identifier": 54,
+        "identifier": 55,
         "alg": "com.adobe.trustmark.F",
         "type": "watermark",
         "decodedMediaTypes": [
