@@ -19,7 +19,31 @@
                     ],
                     "dateEntered": "2025-01-01T00:00:00Z",
                     "contact": "contact@example.com",
-                    "informationalUrl": "https://example.com/softbinding/alg1"
+                    "informationalUrl": "https://example.com/softbinding/alg1",
+                    "externalEvidence": [
+                        {
+                            "url": "https://example.com/softbinding/alg1/benchmark-results.pdf",
+                            "type": "com.example.evidence.benchmark.report",
+                            "alg": "sha256",
+                            "hash": "799d4203122d296792b8005e2ae0dab7757ed9a0083b166bf19e0e400753bd38"
+                        },
+                        {
+                            "url": "https://example.com/softbinding/alg1/robustness.intoto.jsonl",
+                            "type": "com.example.evidence.attestation.in-toto",
+                            "alg": "sha384",
+                            "hash": "7470cab1248a1af9c48f96f6917ac466e5624a06dac8b1efcdde5f33dfccb766c45fd81de0a28173e370c2c65e929190"
+                        },
+                        {
+                            "url": "https://lab.example.org/credentials/alg1-robustness.vc.json",
+                            "type": "org.example.evidence.credential.vc",
+                            "alg": "sha256",
+                            "hash": "d512300b8eba83bfa9a9a0148cd7d1998f7ee81f3ed4bdadbe32d601c5b608fd"
+                        },
+                        {
+                            "url": "https://benchmark.example.org/leaderboards/image-watermarks",
+                            "type": "org.example.evidence.benchmark.leaderboard"
+                        }
+                    ]
                 },
                 "softBindingResolutionApis": [
                     "https://resolver.example.com/alg1"
@@ -106,6 +130,51 @@
                         "type": "string",
                         "format": "uri",
                         "description": "A web page containing more details about the algorithm"
+                    },
+                    "externalEvidence": {
+                        "type": "array",
+                        "minItems": 1,
+                        "description": "A list of references to externally hosted evidence supporting the algorithm's stated capabilities (e.g., benchmark results, audits, certifications). This evidence is provided by the entry owner and is informational only",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri",
+                                    "description": "Location of the external evidence"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "pattern": "^[A-Za-z]{2,63}(?:\\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+\\.?$",
+                                    "description": "The kind of evidence referenced. The format follows the entity-specific namespace as specified for C2PA Assertions labels (e.g., `org.example.evidence.benchmark`)"
+                                },
+                                "alg": {
+                                    "enum": [
+                                        "sha256",
+                                        "sha384",
+                                        "sha512"
+                                    ],
+                                    "description": "Identifier of the hash algorithm used to compute `hash`, taken from the C2PA hash algorithm list"
+                                },
+                                "hash": {
+                                    "type": "string",
+                                    "pattern": "^[a-fA-F0-9]+$",
+                                    "description": "Hex-encoded hash of the content at `url` at the time the entry was written or last updated, computed with `alg`"
+                                }
+                            },
+                            "required": [
+                                "url",
+                                "type"
+                            ],
+                            "dependentRequired": {
+                                "alg": [
+                                    "hash"
+                                ],
+                                "hash": [
+                                    "alg"
+                                ]
+                            }
+                        }
                     }
                 },
                 "required": [
