@@ -99,7 +99,7 @@
                         "format": "date-time",
                         "description": "Date of entry for this algorithm"
                     },
-                    "dateUpdated": {
+                    "dateLastUpdated": {
                         "type": "string",
                         "format": "date-time",
                         "description": "Date this algorithm entry was last updated"
