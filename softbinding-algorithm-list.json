@@ -859,6 +859,23 @@
             "dateEntered": "2026-10-14T14:00:00.000Z",
             "contact": "collomos@adobe.com",
             "informationalUrl": "https://github.com/adobe/trustmark/"
+          }
+    },
+    {
+        "identifier": 54,
+        "alg": "be.immostory.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "video/mp4"
+        ],
+        "entryMetadata": {
+            "description": "ImmoStory AI deployment of Meta FAIR's Video Seal 1.0 invisible video watermark. Embeds a 256-bit payload (64-bit public ImmoStory constant + 192-bit per-video identifier) into every AI-generated property video before C2PA signing; the identifier resolves to the video's original C2PA manifest so provenance survives re-encoding and metadata stripping (EU AI Act Art. 50(2) second marking layer).",
+            "dateEntered": "2026-10-12T00:00:00.000Z",
+            "contact": "support@immostory.ai",
+            "informationalUrl": "https://immostory.ai/en/provenance"
         }
     }
 ]
