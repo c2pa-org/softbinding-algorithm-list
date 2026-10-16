@@ -863,5 +863,25 @@
             "contact": "support@immostory.ai",
             "informationalUrl": "https://immostory.ai/en/provenance"
         }
+    },
+    {
+        "identifier": 55,
+        "alg": "com.quatvision.quatmark.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "encodedMediaTypes": [
+            "image/jpeg",
+            "image/png",
+            "image/tiff",
+            "image/webp"
+        ],
+        "entryMetadata": {
+            "description": "QuatMark keyed invisible image watermark. The watermark carries a compact record identifier bound to the asset's C2PA Manifest in the QuatMark manifest repository; QuatVision resolves the identifier back to the signed manifest when the manifest has been stripped from the file. Generator product on the C2PA Conforming Products List (Level 1, September 2026).",
+            "dateEntered": "2026-10-16T00:00:00.000Z",
+            "contact": "info@quatvision.ai",
+            "informationalUrl": "https://quatmark.com/en/products/c2pa-content-credentials"
+        }
     }
 ]
