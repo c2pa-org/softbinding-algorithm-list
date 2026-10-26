@@ -863,5 +863,25 @@
             "contact": "support@immostory.ai",
             "informationalUrl": "https://immostory.ai/en/provenance"
         }
+    },
+    {
+        "identifier": 59,
+        "alg": "com.damaizlabs.lanternist.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "image",
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "video/mp4",
+            "image/png"
+        ],
+        "entryMetadata": {
+            "description": "Lanternist, an open-source (MIT) local AI video engine, marks every video and thumbnail it generates with Meta's Video Seal 1.0 in the pixels (a fixed public 256-bit message) and AudioSeal in the audio (a fixed public 16-bit message), next to a C2PA manifest. A TrustMark Q signpost (BCH_SUPER) in the same pixels carries this entry's identifier, so that readers know which detector to run. The messages, thresholds and free local detector are documented at the informational URL.",
+            "dateEntered": "2026-10-26T00:00:00.000Z",
+            "contact": "damaizlabs@damaizlabs.com",
+            "informationalUrl": "https://github.com/DamaizLabs/lanternist/blob/main/docs/ai-marking.md#for-other-detectors"
+        }
     }
 ]
