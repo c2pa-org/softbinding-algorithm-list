@@ -865,7 +865,7 @@
         }
     },
     {
-        "identifier": 56,
+        "identifier": 57,
         "alg": "com.encypher.text.watermark.1",
         "type": "watermark",
         "decodedMediaTypes": [
