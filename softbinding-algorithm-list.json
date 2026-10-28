@@ -713,12 +713,10 @@
         "alg": "io.blockfact.audio.watermark.32",
         "type": "watermark",
         "decodedMediaTypes": [
-            "audio",
-            "image",
-            "video"
+            "image"
         ],
         "entryMetadata": {
-            "description": "BlockFact invisible watermarking for audio, image, and video provenance. Embeds a 32-bit lookup key derived from blockchain registration hash, enabling C2PA manifest recovery via the BlockFact Soft Binding Resolution API. Designed for robust provenance binding across compression, transcoding, and format conversion.",
+            "description": "BlockFact invisible image watermarking for provenance. Embeds a 32-bit lookup key derived from the on-chain registration hash, enabling C2PA manifest recovery via the BlockFact Soft Binding Resolution API.",
             "dateEntered": "2026-07-10T16:00:00.000Z",
             "contact": "egbert@blockfact.io",
             "informationalUrl": "https://blockfact.io"
