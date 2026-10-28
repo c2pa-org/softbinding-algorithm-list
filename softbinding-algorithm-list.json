@@ -47,7 +47,7 @@
             "description": "ISO 24138 - International Standard Content Code (ISCC) V0 algorithm",
             "dateEntered": "2024-05-17T16:00:00Z",
             "contact": "info@iscc.io",
-            "informationalUrl": "https://www.iso.org/standard/77899.html"
+            "informationalUrl": "https://ieps.iscc.codes/iep-0020/"
         }
     },
     {
@@ -779,16 +779,20 @@
         ]
     },
     {
-      "identifier": 49,
-      "alg": "com.museblossom.contentsdefence.1",
-      "type": "watermark",
-      "decodedMediaTypes": ["image"],
-      "entryMetadata": {
-        "description": "Contents Defence invisible image watermark, used to recover the associated C2PA manifest when embedded metadata is absent.",
-        "dateEntered": "2026-08-10T00:00:00.000Z",
-        "contact": "contact@museblossom.com",
-        "informationalUrl": "https://museblossom.com/about"
-      }
+        "identifier": 49,
+        "alg": "com.museblossom.contentsdefence.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio",
+            "image",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Contents Defence invisible image watermark, used to recover the associated C2PA manifest when embedded metadata is absent.",
+            "dateEntered": "2026-08-10T00:00:00.000Z",
+            "contact": "contact@museblossom.com",
+            "informationalUrl": "https://museblossom.com/about"
+        }
     },
     {
         "identifier": 50,
@@ -845,6 +849,37 @@
             "dateEntered": "2026-08-13T12:00:00.000Z",
             "contact": "collomos@adobe.com",
             "informationalUrl": "https://arxiv.org/abs/2607.05261"
+        }
+    },
+    {
+        "identifier": 54,
+        "alg": "be.immostory.videoseal.1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "video/mp4"
+        ],
+        "entryMetadata": {
+            "description": "ImmoStory AI deployment of Meta FAIR's Video Seal 1.0 invisible video watermark. Embeds a 256-bit payload (64-bit public ImmoStory constant + 192-bit per-video identifier) into every AI-generated property video before C2PA signing; the identifier resolves to the video's original C2PA manifest so provenance survives re-encoding and metadata stripping (EU AI Act Art. 50(2) second marking layer).",
+            "dateEntered": "2026-10-12T00:00:00.000Z",
+            "contact": "support@immostory.ai",
+            "informationalUrl": "https://immostory.ai/en/provenance"
+        }
+    },
+    {
+        "identifier": 55,
+        "alg": "com.adobe.trustmark.F",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Adobe FiLMCAM Conditional Access Watermarking / Trustmark variant F",
+            "dateEntered": "2026-10-14T14:00:00.000Z",
+            "contact": "collomos@adobe.com",
+            "informationalUrl": "https://github.com/adobe/trustmark/"
         }
     }
 ]
