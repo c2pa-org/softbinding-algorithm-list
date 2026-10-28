@@ -865,7 +865,7 @@
         }
     },
     {
-        "identifier": 55,
+        "identifier": 56,
         "alg": "com.quatvision.quatmark.1",
         "type": "watermark",
         "decodedMediaTypes": [
