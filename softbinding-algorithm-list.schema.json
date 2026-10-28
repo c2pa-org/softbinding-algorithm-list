@@ -29,7 +29,8 @@
                             "benchmarkDate": "2026-07-10",
                             "results": {
                                 "url": "https://example.com/softbinding/alg1/benchmark-results.json",
-                                "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+                                "alg": "sha256",
+                                "hash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
                             }
                         }
                     ]
@@ -153,21 +154,78 @@
                                 },
                                 "results": {
                                     "type": "object",
-                                    "description": "A link to the benchmark results and its SHA-256 content digest",
+                                    "description": "A link to the benchmark results and an optional content digest, using the alg and hash fields of the C2PA hashed-ext-uri-map with hexadecimal encoding for JSON",
                                     "properties": {
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
                                             "description": "A URL containing the benchmark results"
                                         },
-                                        "sha256": {
+                                        "alg": {
+                                            "enum": [
+                                                "sha256",
+                                                "sha384",
+                                                "sha512"
+                                            ],
+                                            "description": "Hash algorithm identifier from the C2PA hash algorithm identifier list"
+                                        },
+                                        "hash": {
                                             "type": "string",
-                                            "pattern": "^[A-Fa-f0-9]{64}$",
-                                            "description": "SHA-256 digest of the benchmark results content, encoded as 64 hexadecimal characters"
+                                            "pattern": "^[A-Fa-f0-9]+$",
+                                            "description": "Digest of the benchmark results content computed using alg, encoded as hexadecimal rather than the CBOR byte string used in the C2PA specification"
                                         }
                                     },
+                                    "dependentRequired": {
+                                        "alg": [
+                                            "hash"
+                                        ],
+                                        "hash": [
+                                            "alg"
+                                        ]
+                                    },
+                                    "allOf": [
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "alg": { "const": "sha256" }
+                                                },
+                                                "required": ["alg"]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "hash": { "minLength": 64, "maxLength": 64 }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "alg": { "const": "sha384" }
+                                                },
+                                                "required": ["alg"]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "hash": { "minLength": 96, "maxLength": 96 }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "alg": { "const": "sha512" }
+                                                },
+                                                "required": ["alg"]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "hash": { "minLength": 128, "maxLength": 128 }
+                                                }
+                                            }
+                                        }
+                                    ],
                                     "required": [
-                                        "url",
+                                        "url"
                                     ]
                                 }
                             },
