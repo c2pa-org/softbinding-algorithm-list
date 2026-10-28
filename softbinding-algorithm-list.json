@@ -897,6 +897,9 @@
             "dateEntered": "2026-10-28T00:00:00.000Z",
             "contact": "info@aidr.studio",
             "informationalUrl": "https://aidr.studio/provenance/watermark/"
-        }
+        },
+        "softBindingResolutionApis": [
+            "https://aidr.studio/api/c2pa/v1"
+        ]
     }
 ]
