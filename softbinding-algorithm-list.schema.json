@@ -28,7 +28,7 @@
                             ],
                             "benchmarkDate": "2026-07-10",
                             "results": {
-                                "url": "https://example.com/softbinding/alg1/benchmark-results.json",
+                                "url": "https://example.com/softbinding/alg1/benchmark",
                                 "alg": "sha256",
                                 "hash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
                             }
