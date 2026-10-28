@@ -879,7 +879,7 @@
         }
     },
     {
-        "identifier": 57,
+        "identifier": 58,
         "alg": "com.encypher.text.fingerprint.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
