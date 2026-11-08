@@ -921,5 +921,20 @@
         "softBindingResolutionApis": [
             "https://aidr.studio/api/c2pa/v1"
         ]
+    },
+    {
+        "identifier": 64,
+        "alg": "com.dreamartfields.signature.2",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "Dream Art Fields invisible signature, version 2 (tile), by YambaCode AB. A keyed spread-spectrum pattern in luminance: a 31 x 31-cell tile, a quarter of it pilot cells for synchronisation, repeated from the top-left corner of every picture and every video frame, with the cell size scaled to the short side, so a detector can still read it after re-encoding, resizing and crops. It carries a 64-bit payload: magic 0xDA, version 2 with an AI-generated flag, a 32-bit BLAKE2b hash of the library asset id and a CRC-16. The same 4-byte hash is the value of the c2pa.soft-binding block in the signed C2PA manifest the app writes. The detection key is published and the reference detector (daf-check, Apache-2.0) is free; the app looks a detected hash up in the creator's own library to find a matching item and its signed manifest.",
+            "dateEntered": "2026-11-08T00:00:00.000Z",
+            "contact": "hello@dreamartfields.com",
+            "informationalUrl": "https://github.com/yambacode/daf-check/blob/main/SPEC.md"
+        }
     }
 ]
