@@ -921,5 +921,18 @@
         "softBindingResolutionApis": [
             "https://aidr.studio/api/c2pa/v1"
         ]
+    },
+    {
+      "identifier": 61,
+      "alg": "com.art-koffee.phash.1",
+      "type": "fingerprint",
+      "decodedMediaTypes": ["image"],
+      "entryMetadata": {
+        "description": "ArtKoffee perceptual fingerprint: 64-bit DCT pHash of artwork images (EXIF-oriented, alpha over white, ITU-R 601 grayscale, 32x32 Lanczos, unnormalized 8x8 low-frequency DCT-II vs. median), with mirrored lookup. Used as a soft binding to recover C2PA manifests of artwork registered by its authors on ArtKoffee; matches at Hamming distance <= 6.",
+        "dateEntered": "2026-11-10T00:00:00.000Z",
+        "contact": "developers@art-koffee.com",
+        "informationalUrl": "https://www.art-koffee.com/provenance/algorithm"
+      },
+      "softBindingResolutionApis": ["https://www.art-koffee.com/c2pa/v1"]
     }
 ]
