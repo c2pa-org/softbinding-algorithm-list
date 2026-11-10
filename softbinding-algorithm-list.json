@@ -921,5 +921,19 @@
         "softBindingResolutionApis": [
             "https://aidr.studio/api/c2pa/v1"
         ]
+    },
+    {
+        "identifier": 77,
+        "alg": "castLabs.watermark.1.session-v1",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "video"
+        ],
+        "entryMetadata": {
+            "description": "castLabs forensic watermarking session-v1 variant for video manifest recovery. Supports embedding and extraction of a session identifier used to recover associated C2PA Manifests. Distinct from castLabs.watermark.1.",
+            "dateEntered": "2026-11-10T00:00:00.000Z",
+            "contact": "info@castlabs.com",
+            "informationalUrl": "https://castlabs.com/image-watermarking/"
+        }
     }
 ]
