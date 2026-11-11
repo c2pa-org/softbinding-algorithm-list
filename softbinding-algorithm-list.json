@@ -923,7 +923,7 @@
         ]
     },
     {
-        "identifier": 61,
+        "identifier": 62,
         "alg": "com.ottxp.koltheia.photonote.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
