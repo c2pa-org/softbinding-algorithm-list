@@ -971,5 +971,73 @@
         "softBindingResolutionApis": [
             "https://api.etchv.com/c2pa/v1"
         ]
+    },
+    {
+        "identifier": 62,
+        "alg": "ai.label4.watermark.walrus",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image",
+            "video"
+        ],
+        "encodedMediaTypes": [
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "video/mp4",
+            "video/x-matroska"
+        ],
+        "entryMetadata": {
+            "description": "Label4.ai invisible image/video watermark carrying a secret-keyed content identifier for C2PA soft binding.",
+            "categories": [
+                "ai.label4.watermarking",
+                "ai.label4.context.ai-generated"
+            ],
+            "dateEntered": "2026-11-04T00:00:00.000Z",
+            "contact": "tech@label4.ai",
+            "informationalUrl": "https://api.label4.ai/doc/v2/#walrus"
+        }
+    },
+    {
+        "identifier": 63,
+        "alg": "ai.label4.watermark.phaseal",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "audio"
+        ],
+        "encodedMediaTypes": [
+            "audio/x-wav",
+            "audio/mpeg",
+            "audio/mp4",
+            "audio/flac"
+        ],
+        "entryMetadata": {
+            "description": "Label4.ai imperceptible audio watermark carrying a secret-keyed content identifier for C2PA soft binding.",
+            "categories": [
+                "ai.label4.watermarking",
+                "ai.label4.context.ai-generated"
+            ],
+            "dateEntered": "2026-11-04T00:00:00.000Z",
+            "contact": "tech@label4.ai",
+            "informationalUrl": "https://api.label4.ai/doc/v2/#phaseal"
+        }
+    },
+    {
+        "identifier": 64,
+        "alg": "ai.label4.watermark.fastermax",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "text"
+        ],
+        "entryMetadata": {
+            "description": "Label4.ai text watermark detector identifying watermarks used for C2PA soft binding.",
+            "categories": [
+                "ai.label4.watermarking",
+                "ai.label4.context.ai-generated"
+            ],
+            "dateEntered": "2026-11-04T00:00:00.000Z",
+            "contact": "tech@label4.ai",
+            "informationalUrl": "https://api.label4.ai/doc/v2/#fastermax"
+        }
     }
 ]
