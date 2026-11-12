@@ -971,10 +971,9 @@
         "softBindingResolutionApis": [
             "https://api.etchv.com/c2pa/v1"
         ]
-    }
-,
+    },
     {
-        "identifier": 61,
+        "identifier": 62,
         "alg": "ai.label4.watermark.walrus",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -1000,7 +999,7 @@
         }
     },
     {
-        "identifier": 62,
+        "identifier": 63,
         "alg": "ai.label4.watermark.phaseal",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -1024,7 +1023,7 @@
         }
     },
     {
-        "identifier": 63,
+        "identifier": 64,
         "alg": "ai.label4.watermark.fastermax",
         "type": "watermark",
         "decodedMediaTypes": [
