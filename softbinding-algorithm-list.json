@@ -716,10 +716,10 @@
             "image"
         ],
         "entryMetadata": {
-            "description": "BlockFact invisible image watermarking for provenance. Embeds a 32-bit lookup key derived from the on-chain registration hash, enabling C2PA manifest recovery via the BlockFact Soft Binding Resolution API.",
+            "description": "Superseded by io.blockfact.image.watermark.32 (identifier 62). This entry identifies the same BlockFact image watermark; its name was registered in error and is retained for compatibility.",
             "dateEntered": "2026-07-10T16:00:00.000Z",
             "contact": "egbert@blockfact.io",
-            "informationalUrl": "https://blockfact.io"
+            "informationalUrl": "https://docs.blockfact.io/api/soft-binding"
         },
         "softBindingResolutionApis": [
             "https://api.blockfact.io/api/soft-binding/v1"
@@ -970,6 +970,23 @@
         },
         "softBindingResolutionApis": [
             "https://api.etchv.com/c2pa/v1"
+        ]
+    },
+    {
+        "identifier": 62,
+        "alg": "io.blockfact.image.watermark.32",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "BlockFact invisible image watermark for provenance recovery. Embeds the capture's registration hash in the pixel data of a lossless image (fragile: does not survive lossy re-encoding or resizing). The 32-bit soft binding value is the first 32 bits of the embedded payload. The resolver returns the capture's zero-knowledge-verified registration on StarkNet. Supersedes identifier 45.",
+            "dateEntered": "2026-11-12T00:00:00.000Z",
+            "contact": "egbert@blockfact.io",
+            "informationalUrl": "https://docs.blockfact.io/api/soft-binding"
+        },
+        "softBindingResolutionApis": [
+            "https://api.blockfact.io/api/soft-binding/v1"
         ]
     }
 ]
