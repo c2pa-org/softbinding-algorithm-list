@@ -973,7 +973,7 @@
         ]
     },
     {
-        "identifier": 62,
+        "identifier": 77,
         "alg": "com.art-koffee.phash.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
