@@ -120,7 +120,7 @@ def main():
 
     try:
         with open(args.file, "r", encoding="utf-8") as f:
-               entries = json.load(f)
+            entries = json.load(f)
     except (OSError, json.JSONDecodeError) as error:
         print(f"::error::Could not read algorithm list: {error}")
         sys.exit(2)
