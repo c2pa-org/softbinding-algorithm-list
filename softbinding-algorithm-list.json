@@ -961,7 +961,7 @@
         }
     },
     {
-        "identifier": 67,
+        "identifier": 69,
         "alg": "com.originalpictures.audioseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
