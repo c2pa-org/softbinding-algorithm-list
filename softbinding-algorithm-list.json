@@ -1099,7 +1099,7 @@
         }
     },
     {
-        "identifier": 74,
+        "identifier": 76,
         "alg": "com.originalpictures.audfprint.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
