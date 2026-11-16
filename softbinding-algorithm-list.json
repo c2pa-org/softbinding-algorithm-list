@@ -923,7 +923,7 @@
         ]
     },
     {
-        "identifier": 65,
+        "identifier": 67,
         "alg": "com.originalpictures.pixelseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
