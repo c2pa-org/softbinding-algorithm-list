@@ -951,7 +951,7 @@
         ]
     },
     {
-        "identifier": 64,
+        "identifier": 66,
         "alg": "com.dreamartfields.signature.2",
         "type": "watermark",
         "decodedMediaTypes": [
