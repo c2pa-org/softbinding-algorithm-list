@@ -1080,7 +1080,7 @@
         }
     },
     {
-        "identifier": 73,
+        "identifier": 75,
         "alg": "com.originalpictures.chromaprint.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
