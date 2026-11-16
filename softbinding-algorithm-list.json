@@ -1318,7 +1318,7 @@
             "informationalUrl": "https://originalpictures.com/soft-bindings/vpdq/"
         }
     },
-     {
+    {
         "identifier": 80,
         "alg": "castLabs.watermark.1.session-v1",
         "type": "watermark",
