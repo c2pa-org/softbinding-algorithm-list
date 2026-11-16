@@ -1017,7 +1017,7 @@
         }
     },
     {
-        "identifier": 70,
+        "identifier": 72,
         "alg": "com.originalpictures.dinov2.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
