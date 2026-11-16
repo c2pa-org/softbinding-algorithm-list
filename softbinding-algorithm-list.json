@@ -1059,7 +1059,7 @@
         }
     },
     {
-        "identifier": 72,
+        "identifier": 74,
         "alg": "com.originalpictures.dinov2-lsh256.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
