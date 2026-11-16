@@ -1135,7 +1135,7 @@
         }
     },
     {
-        "identifier": 76,
+        "identifier": 78,
         "alg": "com.originalpictures.vpdq.1",
         "type": "fingerprint",
         "decodedMediaTypes": [
