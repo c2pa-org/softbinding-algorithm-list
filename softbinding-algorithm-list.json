@@ -974,6 +974,23 @@
     },
     {
         "identifier": 62,
+        "alg": "com.ottxp.koltheia.photonote.1",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "KolTheia photo note: spread ORB keypoints plus secret-pattern colour squares, matched with turn-and-resize or perspective fits, to recover the C2PA Manifest of a sealed photo from a recompressed, cropped, slanted or partly drawn-over copy",
+            "dateEntered": "2026-10-31T00:00:00.000Z",
+            "contact": "koltheia@ottxp.com",
+            "informationalUrl": "https://koltheia.ottxp.com/docs/soft-binding.html"
+        },
+        "softBindingResolutionApis": [
+            "https://koltheia.ottxp.com/api/softbinding/v1"
+        ]
+    },
+    {
+        "identifier": 63,
         "alg": "ai.label4.watermark.walrus",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -999,7 +1016,7 @@
         }
     },
     {
-        "identifier": 63,
+        "identifier": 64,
         "alg": "ai.label4.watermark.phaseal",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -1023,7 +1040,7 @@
         }
     },
     {
-        "identifier": 64,
+        "identifier": 65,
         "alg": "ai.label4.watermark.fastermax",
         "type": "watermark",
         "decodedMediaTypes": [
