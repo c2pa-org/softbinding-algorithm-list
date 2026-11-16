@@ -979,7 +979,7 @@
         }
     },
     {
-        "identifier": 68,
+        "identifier": 70,
         "alg": "com.originalpictures.videoseal.1",
         "type": "watermark",
         "decodedMediaTypes": [
