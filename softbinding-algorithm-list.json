@@ -973,7 +973,7 @@
         ]
     },
     {
-        "identifier": 80,
+        "identifier": 81,
         "alg": "no.incremental.jeevo.videoseal-1.0",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -997,7 +997,7 @@
         ]
     },
     {
-        "identifier": 81,
+        "identifier": 82,
         "alg": "no.incremental.jeevo.audioseal-0.2",
         "type": "watermark",
         "decodedMediaTypes": [
