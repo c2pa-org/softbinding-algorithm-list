@@ -1331,5 +1331,19 @@
             "contact": "info@castlabs.com",
             "informationalUrl": "https://castlabs.com/image-watermarking/"
         }
+    },
+    {
+        "identifier": 81,
+        "alg": "tech.lumid.fingerprint.v1",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Lumid image fingerprinting algorithm v1.",
+            "dateEntered": "2026-11-19T00:00:00Z",
+            "contact": "info@lumid.tech",
+            "informationalUrl": "https://lumid.tech/fingerprinting"
+        }
     }
 ]
