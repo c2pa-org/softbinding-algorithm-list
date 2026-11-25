@@ -22,8 +22,7 @@
         "type": "watermark",
         "decodedMediaTypes": [
             "audio",
-            "video",
-            "image"
+            "video"
         ],
         "entryMetadata": {
             "description": "ATSC watermarking (A/334, A/335, A/336)",
