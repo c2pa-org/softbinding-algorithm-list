@@ -6,27 +6,52 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+permissions:
+  contents: read
+
 jobs:
   validate-json:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Install sourcemeta json schema cli
-      uses: sourcemeta/jsonschema@main
-        
-    - name: Lint JSON files
-      run: |
-        echo "Linting softbinding-algorithm-list.schema.json..."
-        set -e  # Exit on any error
-        jsonschema lint softbinding-algorithm-list.schema.json
-        echo "✓ softbinding-algorithm-list.schema.json passed linting"
-        
-    - name: Validate against schema
-      run: |
-        echo "Validating softbinding-algorithm-list.json against schema..."
-        set -e  # Exit on any error
-        jsonschema validate softbinding-algorithm-list.schema.json softbinding-algorithm-list.json 
-        echo "✓ softbinding-algorithm-list.json is valid against the schema"
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validator
+        run: python -m pip install jsonschema==4.26.0
+      - name: Test assignment and validation
+        run: python -m unittest discover -s .github/scripts -p 'test_*.py' -v
+      - name: Validate submission and published identifiers
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = pull_request ]; then
+            python .github/scripts/registry.py --submission --base-ref "origin/$BASE_REF"
+          else
+            python .github/scripts/registry.py --base-ref "origin/$BASE_REF"
+          fi
+
+  # Make both jobs required, with up-to-date branches. New submissions may
+  # omit IDs; a maintainer assigns them locally before merging the same PR.
+  publish-ready:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install jsonschema==4.26.0
+      - name: Require complete, unique IDs and preserve published identity
+        env:
+          BASE_REF: ${{ github.base_ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+          python .github/scripts/registry.py --base-ref "origin/$BASE_REF"
