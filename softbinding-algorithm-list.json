@@ -1394,5 +1394,19 @@
         "softBindingResolutionApis": [
             "https://api.jeevo.ai/v1/softbinding"
         ]
+    },
+    {
+        "identifier": 84,
+        "alg": "tech.lumid.fingerprint.v1",
+        "type": "fingerprint",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "Lumid image fingerprinting algorithm v1.",
+            "dateEntered": "2026-11-19T00:00:00Z",
+            "contact": "info@lumid.tech",
+            "informationalUrl": "https://lumid.tech/fingerprinting"
+        }
     }
 ]
