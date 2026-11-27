@@ -1371,7 +1371,8 @@
         },
         "softBindingResolutionApis": [
             "https://api.jeevo.ai/v1/softbinding"
-        ]
+        ],
+        "identifier": 82
     },
     {
         "alg": "no.incremental.jeevo.audioseal-0.2",
@@ -1391,6 +1392,7 @@
         },
         "softBindingResolutionApis": [
             "https://api.jeevo.ai/v1/softbinding"
-        ]
+        ],
+        "identifier": 83
     }
 ]
