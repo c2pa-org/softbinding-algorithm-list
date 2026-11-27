@@ -29,6 +29,7 @@ For a PR (new entry or update) to be approved the following criteria are importa
 - The entry shall not appear to be malicious (e.g., spam) or harmful.
 - The PR shall be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
 - The provided URLs shall successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`).
+- when present, `softBindingResolutionApis` shall reference APIs implementing at least the mandatory endpoints of the [C2PA Soft Binding Resolution API specification](https://spec.c2pa.org/specifications/specifications/2.5/softbinding/Decoupled.html)
 - `informationalUrl` shall reference documentation specific to the algorithm described by the entry. The referenced documentation shall provide a general description of the algorithm and its operation.
 - The algorithm covered by the entry shall support embedding, extracting, or both, of a soft binding identifier for the purpose of manifest recovery.
 - When updating an entry, the fields: `identifier`, `alg` and `type` shall not be changed.
