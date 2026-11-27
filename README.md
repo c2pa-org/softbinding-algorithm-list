@@ -7,7 +7,16 @@ The soft binding assertion contains a field `alg` which uniquely identifies the 
 ## Guidelines for submitting a new entry
 
 ### Pull request
-Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests are made by submitting a Pull Request (PR) that adds to, or edits, the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list-schema.json).
+Developers of soft binding algorithms may request these be added as new entries in the soft binding algorithm list. Developers may also request amendments to their entries. These requests are made by submitting a Pull Request (PR) that adds to, or edits, the [softbinding-algorithm-list JSON array](softbinding-algorithm-list.json) in this repository and following the [schema](softbinding-algorithm-list.schema.json). For new entries, omit `identifier`: a maintainer assigns it locally before merge. All other required fields still apply. Keep existing identifiers when amending an entry.
+
+### Assigning identifiers before merge
+
+Contributors add new entries without `identifier`; maintainers assign IDs locally
+in the same PR after technical review. The public schema still requires IDs for
+published entries. `validate-json` accepts ID-less new entries, while
+`publish-ready` intentionally fails until IDs are assigned. Both checks reject
+duplicate algorithm names or IDs and changes to published `identifier`, `alg`,
+or `type` fields. Normal amendments and deprecation remain possible.
 
 ### Selection rules
 
@@ -16,15 +25,13 @@ The C2PA Technical Working Group will approve and merge PRs in accordance with i
 C2PA's Technical Working Group may also decide to remove malicious or non-conformant entries from the list of approved soft binding algorithms.
 
 For a PR (new entry or update) to be approved the following criteria are important:
-- The entry shall conform with the [schema](softbinding-algorithm-list-schema.json) and shall include all the mandatory fields.
+- The published entry shall conform with the [schema](softbinding-algorithm-list.schema.json) and shall include all mandatory fields. New-entry submissions may omit `identifier` until a maintainer assigns it.
 - The entry shall not appear to be malicious (e.g., spam) or harmful.
 - The PR shall be submitted by an individual affiliated with the company owning the submitted proprietary algorithm or a maintainer of the submitted open source algorithm or its fork.
 - The provided URLs shall successfully resolve (e.g., `softBindingResolutionApis`, `informationalUrl`).
 - when present, `softBindingResolutionApis` shall reference APIs implementing at least the mandatory endpoints of the [C2PA Soft Binding Resolution API specification](https://spec.c2pa.org/specifications/specifications/2.5/softbinding/Decoupled.html)
 - `informationalUrl` shall reference documentation specific to the algorithm described by the entry. The referenced documentation shall provide a general description of the algorithm and its operation.
 - The algorithm covered by the entry shall support embedding, extracting, or both, of a soft binding identifier for the purpose of manifest recovery.
-- When updating an entry, the fields: `identifier`, `alg` and `type` shall not be changed. 
-
-
+- When updating an entry, the fields: `identifier`, `alg` and `type` shall not be changed.
 
 
