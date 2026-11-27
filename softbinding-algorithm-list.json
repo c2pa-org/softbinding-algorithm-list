@@ -710,16 +710,17 @@
     },
     {
         "identifier": 45,
+        "deprecated": true,
         "alg": "io.blockfact.audio.watermark.32",
         "type": "watermark",
         "decodedMediaTypes": [
             "image"
         ],
         "entryMetadata": {
-            "description": "BlockFact invisible image watermarking for provenance. Embeds a 32-bit lookup key derived from the on-chain registration hash, enabling C2PA manifest recovery via the BlockFact Soft Binding Resolution API.",
+            "description": "Deprecated. This entry was registered under a misleading name: it identifies BlockFact's invisible IMAGE watermark, as its media type states, not an audio watermark. It is replaced by io.blockfact.image.watermark.32. The resolution API still accepts this name for resolving.",
             "dateEntered": "2026-07-10T16:00:00.000Z",
             "contact": "egbert@blockfact.io",
-            "informationalUrl": "https://blockfact.io"
+            "informationalUrl": "https://docs.blockfact.io/api/soft-binding"
         },
         "softBindingResolutionApis": [
             "https://api.blockfact.io/api/soft-binding/v1"
@@ -1334,6 +1335,22 @@
     },
     {
         "identifier": 81,
+        "alg": "io.blockfact.image.watermark.32",
+        "type": "watermark",
+        "decodedMediaTypes": [
+            "image"
+        ],
+        "entryMetadata": {
+            "description": "BlockFact invisible image watermark for provenance recovery. Embeds the capture's registration hash in the pixel data of a lossless image (fragile: does not survive lossy re-encoding or resizing). The 32-bit soft binding value is the first 32 bits of the embedded payload. The resolver returns the capture's zero-knowledge-verified registration on StarkNet. Replaces io.blockfact.audio.watermark.32 (identifier 45).",
+            "dateEntered": "2026-11-18T00:00:00.000Z",
+            "contact": "egbert@blockfact.io",
+            "informationalUrl": "https://docs.blockfact.io/api/soft-binding"
+        },
+        "softBindingResolutionApis": [
+            "https://api.blockfact.io/api/soft-binding/v1"
+        ]
+    },
+    {
         "alg": "no.incremental.jeevo.videoseal-1.0",
         "type": "watermark",
         "decodedMediaTypes": [
@@ -1357,7 +1374,6 @@
         ]
     },
     {
-        "identifier": 82,
         "alg": "no.incremental.jeevo.audioseal-0.2",
         "type": "watermark",
         "decodedMediaTypes": [
