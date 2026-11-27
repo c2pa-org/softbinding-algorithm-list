@@ -1396,6 +1396,7 @@
         ]
     },
     {
+        "identifier": 84,
         "alg": "tech.lumid.fingerprint.v1",
         "type": "fingerprint",
         "decodedMediaTypes": [
