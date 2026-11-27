@@ -53,7 +53,8 @@ def assign_identifiers(entries, published):
                 raise ValueError("Identifier space exhausted (maximum 65535)")
             entry["identifier"] = next_id
             next_id += 1
-    return result
+    # JSON serialization follows insertion order; keep identifiers first.
+    return [{"identifier": entry["identifier"], **entry} for entry in result]
 
 
 def main():
